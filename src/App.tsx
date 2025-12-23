@@ -1,300 +1,173 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Facebook, Twitter, Instagram, CheckCircle } from "lucide-react";
+import { Line } from "react-chartjs-2";
+import "chart.js/auto";
+import { Facebook, Twitter, Instagram } from "lucide-react";
 
-type Page =
-  | "home"
-  | "mission"
-  | "whitepaper"
-  | "apply"
-  | "tokenomics";
+
+/* ✅ REQUIRED: Register Chart.js scales */
 
 export default function App() {
-  const [page, setPage] = useState<Page>("home");
-  const [missionTab, setMissionTab] = useState<
-    "interest" | "fee" | "trust" | "global"
-  >("interest");
-  const [submitted, setSubmitted] = useState(false);
+  const [page, setPage] = useState<
+    "home" | "mission" | "tokenomics" | "whitepaper" | "apply"
+  >("home");
+
+  const Nav = ({ label, p }: { label: string; p: typeof page }) => (
+    <button
+      onClick={() => setPage(p)}
+      className="hover:text-emerald-400 transition font-medium"
+    >
+      {label}
+    </button>
+  );
+
+  const tokenData = {
+    labels: ["Public", "Lending Pool", "Team", "Marketing", "Reserve"],
+    datasets: [
+      {
+        label: "Token Allocation %",
+        data: [50, 25, 10, 10, 5],
+        borderColor: "#34d399",
+        backgroundColor: "rgba(52,211,153,0.25)",
+        tension: 0.4,
+      },
+    ],
+  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-indigo-950 via-slate-950 to-black text-white">
+    <div className="min-h-screen bg-gradient-to-b from-blue-950 via-black to-black text-white">
       {/* HEADER */}
-      <header className="sticky top-0 z-50 backdrop-blur bg-black/40 border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center gap-4">
-          <div className="flex gap-6 text-sm font-medium">
-            {[
-              ["Home", "home"],
-              ["Mission", "mission"],
-              ["Tokenomics", "tokenomics"],
-              ["White Paper", "whitepaper"],
-              ["Apply", "apply"],
-            ].map(([label, key]) => (
-              <button
-                key={key}
-                onClick={() => setPage(key as Page)}
-                className="hover:text-cyan-300 transition"
-              >
-                {label}
-              </button>
-            ))}
+      <header className="sticky top-0 z-50 backdrop-blur bg-black/70 border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <div className="text-2xl font-extrabold bg-gradient-to-r from-cyan-400 via-emerald-400 to-blue-400 bg-clip-text text-transparent">
+            Bad Credit Coin
           </div>
-          <button className="px-4 py-2 border border-white/20 rounded-lg text-sm">
+
+          <nav className="flex gap-8 text-sm">
+            <Nav label="Home" p="home" />
+            <Nav label="Mission" p="mission" />
+            <Nav label="Tokenomics" p="tokenomics" />
+            <Nav label="White Paper" p="whitepaper" />
+            <Nav label="Apply" p="apply" />
+          </nav>
+
+          <button className="px-5 py-2 rounded-lg bg-gradient-to-r from-emerald-400 to-cyan-400 text-black font-semibold">
             Connect Wallet
           </button>
         </div>
       </header>
 
-      {/* PAGE CONTENT */}
       <AnimatePresence mode="wait">
         {/* HOME */}
         {page === "home" && (
           <motion.section
             key="home"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
             className="py-24 px-6 max-w-7xl mx-auto space-y-24"
           >
-            <div className="text-center max-w-4xl mx-auto space-y-6">
+            {/* HERO */}
+            <div className="text-center space-y-6 max-w-4xl mx-auto">
               <h1 className="text-6xl font-bold">
-                Fair Credit. <span className="text-cyan-400">Zero Interest.</span>
+                Fair Credit.{" "}
+                <span className="text-emerald-400">Zero Interest.</span>
               </h1>
               <p className="text-slate-300 text-lg">
-                Bad Credit Coin is a blockchain-powered, interest-free lending
-                ecosystem built to restore fairness, transparency, and access.
+                Ethical blockchain lending designed to rebuild trust without
+                interest-based exploitation.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
+              <div className="flex justify-center gap-6 mt-8">
                 <button
                   onClick={() => setPage("whitepaper")}
-                  className="px-8 py-3 rounded-lg bg-gradient-to-r from-cyan-400 to-violet-400 text-black font-semibold"
+                  className="px-6 py-3 rounded-lg bg-gradient-to-r from-emerald-400 to-cyan-400 text-black font-semibold"
                 >
                   Read White Paper
                 </button>
                 <button
                   onClick={() => setPage("apply")}
-                  className="px-8 py-3 rounded-lg border border-white/30"
+                  className="px-6 py-3 rounded-lg border border-white/20 hover:border-emerald-400 transition"
                 >
                   Apply for Credit
                 </button>
               </div>
             </div>
 
-            {/* WHAT WE DO */}
-            <div className="grid md:grid-cols-3 gap-10">
-              {[
-                "Interest-Free Lending",
-                "Credit Building",
-                "Global Expansion",
-              ].map((item) => (
-                <motion.div
-                  key={item}
-                  whileHover={{ scale: 1.05 }}
-                  className="bg-white/5 border border-white/10 rounded-xl p-6 text-center"
-                >
-                  <h3 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-violet-400 bg-clip-text text-transparent">
-                    {item}
-                  </h3>
-                </motion.div>
-              ))}
-            </div>
-          </motion.section>
-        )}
+            {/* WHO WE ARE */}
+            <section className="space-y-6 max-w-5xl mx-auto text-center">
+              <h2 className="text-4xl font-bold text-emerald-400">
+                Who We Are
+              </h2>
+              <p className="text-slate-300">
+                Bad Credit Coin is a decentralized zero-interest lending
+                protocol built to replace predatory finance with fairness,
+                transparency, and on-chain accountability.
+              </p>
+            </section>
 
-        {/* MISSION */}
-        {page === "mission" && (
-          <motion.section
-            key="mission"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="py-24 px-6 max-w-6xl mx-auto space-y-12"
-          >
-            <h1 className="text-5xl text-center font-bold text-cyan-400">
-              Our Mission
-            </h1>
+            {/* TOKENOMICS */}
+            <section className="space-y-6 max-w-5xl mx-auto text-center">
+              <h2 className="text-4xl font-bold text-emerald-400">
+                Tokenomics
+              </h2>
+              <p className="text-slate-300">
+                Total Supply: 10,000,000,000 BCC
+              </p>
+              <Line data={tokenData} />
+            </section>
 
-            <div className="flex flex-wrap justify-center gap-4">
-              {[
-                ["interest", "Zero Interest"],
-                ["fee", "Monthly Fee"],
-                ["trust", "On-Chain Trust"],
-                ["global", "Global Inclusion"],
-              ].map(([key, label]) => (
-                <button
-                  key={key}
-                  onClick={() =>
-                    setMissionTab(key as "interest" | "fee" | "trust" | "global")
-                  }
-                  className={`px-4 py-2 rounded-lg ${
-                    missionTab === key
-                      ? "bg-cyan-500 text-black"
-                      : "border border-white/20"
-                  }`}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
-
-            <div className="bg-white/5 border border-white/10 rounded-xl p-8 space-y-4 text-slate-300">
-              {missionTab === "interest" && (
-                <>
-                  <h3 className="text-2xl font-bold text-white">
-                    Zero-Interest Lending Model
-                  </h3>
-                  <p>
-                    We remove interest entirely. Borrowers know exactly what they
-                    owe from day one — no compounding debt, no traps.
-                  </p>
-                </>
-              )}
-
-              {missionTab === "fee" && (
-                <>
-                  <h3 className="text-2xl font-bold text-white">
-                    Monthly Service Fee Transparency
-                  </h3>
-                  <p>
-                    A clearly disclosed service fee replaces hidden interest,
-                    penalties, and manipulation.
-                  </p>
-                </>
-              )}
-
-              {missionTab === "trust" && (
-                <>
-                  <h3 className="text-2xl font-bold text-white">
-                    Credit Rebuilding via Blockchain
-                  </h3>
-                  <p>
-                    Every successful repayment is recorded on-chain, creating a
-                    tamper-proof reputation.
-                  </p>
-                </>
-              )}
-
-              {missionTab === "global" && (
-                <>
-                  <h3 className="text-2xl font-bold text-white">
-                    Global Financial Inclusion
-                  </h3>
-                  <p>
-                    Ethical lending without borders — serving the unbanked
-                    worldwide.
-                  </p>
-                </>
-              )}
-            </div>
-          </motion.section>
-        )}
-
-        {/* TOKENOMICS */}
-        {page === "tokenomics" && (
-          <motion.section
-            key="tokenomics"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="py-24 px-6 max-w-5xl mx-auto space-y-10"
-          >
-            <h1 className="text-5xl text-center font-bold text-cyan-400">
-              Tokenomics
-            </h1>
-
-            <ul className="grid md:grid-cols-2 gap-6 text-slate-300 text-lg">
-              <li>Total Supply: 10 Billion</li>
-              <li>50% Public Allocation</li>
-              <li>25% Lending Liquidity</li>
-              <li>10% Marketing</li>
-              <li>10% Team (Vested)</li>
-              <li>5% Incentives</li>
-            </ul>
-          </motion.section>
-        )}
-
-        {/* WHITE PAPER */}
-        {page === "whitepaper" && (
-          <motion.section
-            key="whitepaper"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="py-24 px-6 max-w-5xl mx-auto space-y-6"
-          >
-            <h1 className="text-4xl font-bold text-cyan-400">
-              White Paper
-            </h1>
-            <p className="text-slate-300">
-              Read the complete protocol design, economic model, and governance
-              framework directly on this site or download the full PDF.
-            </p>
-
-            <a
-              href="/Bad-Credit-Coin-Whitepaper.pdf"
-              download
-              className="inline-block px-6 py-3 bg-cyan-500 text-black rounded-lg font-semibold"
-            >
-              Download PDF
-            </a>
-          </motion.section>
-        )}
-
-        {/* APPLY */}
-        {page === "apply" && (
-          <motion.section
-            key="apply"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="py-24 px-6 max-w-3xl mx-auto space-y-8"
-          >
-            <h1 className="text-4xl font-bold text-center text-cyan-400">
-              Apply for Credit
-            </h1>
-
-            {!submitted ? (
-              <form
-                className="space-y-4"
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  setSubmitted(true);
-                }}
-              >
-                {["Full Name", "Email", "Country", "Requested Amount"].map(
-                  (f) => (
-                    <input
-                      key={f}
-                      required
-                      placeholder={f}
-                      className="w-full p-3 rounded bg-black/40 border border-white/10"
-                    />
-                  )
-                )}
-
-                <button className="w-full py-3 bg-gradient-to-r from-cyan-400 to-violet-400 text-black rounded-lg font-semibold">
-                  Submit Application
-                </button>
-              </form>
-            ) : (
-              <div className="text-center space-y-4">
-                <CheckCircle size={48} className="mx-auto text-green-400" />
-                <p>Application submitted successfully.</p>
+            {/* THREE PILLARS */}
+            <section className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+                <h3 className="text-xl font-bold text-emerald-400">
+                  Interest-Free Lending
+                </h3>
+                <p className="text-slate-300 mt-4">
+                  Borrow exactly what you repay. No interest, no compounding
+                  debt, no traps.
+                </p>
               </div>
-            )}
+
+              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+                <h3 className="text-xl font-bold text-emerald-400">
+                  Credit Building
+                </h3>
+                <p className="text-slate-300 mt-4">
+                  Repayment history is recorded on-chain to rebuild financial
+                  trust globally.
+                </p>
+              </div>
+
+              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+                <h3 className="text-xl font-bold text-emerald-400">
+                  Global Expansion
+                </h3>
+                <p className="text-slate-300 mt-4">
+                  Borderless ethical finance for underserved communities.
+                </p>
+              </div>
+            </section>
+
+            {/* CTA */}
+            <div className="text-center">
+              <button
+                onClick={() => setPage("apply")}
+                className="px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-400 to-cyan-400 text-black font-bold"
+              >
+                Join the Waitlist
+              </button>
+            </div>
+
+            {/* FOOTER */}
+            <footer className="pt-16 border-t border-white/10 flex justify-center gap-8">
+              <Facebook />
+              <Twitter />
+              <Instagram />
+            </footer>
           </motion.section>
         )}
       </AnimatePresence>
-
-      {/* FOOTER */}
-      <footer className="border-t border-white/10 py-10 text-center text-slate-400 space-y-4">
-        <div className="flex justify-center gap-6">
-          <Facebook />
-          <Twitter />
-          <Instagram />
-        </div>
-        <p>© 2025 Bad Credit Coin. Not financial advice.</p>
-      </footer>
     </div>
   );
 }
