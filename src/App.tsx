@@ -4,12 +4,12 @@ import { Doughnut } from "react-chartjs-2";
 import "chart.js/auto";
 import { Facebook, Twitter, Instagram } from "lucide-react";
 
-export default function App() {
-  const [page, setPage] = useState<
-    "home" | "mission" | "tokenomics" | "whitepaper" | "apply"
-  >("home");
+type Page = "home" | "mission" | "tokenomics" | "whitepaper" | "apply";
 
-  const Nav = ({ label, p }: { label: string; p: typeof page }) => (
+export default function App() {
+  const [page, setPage] = useState<Page>("home");
+
+  const Nav = ({ label, p }: { label: string; p: Page }) => (
     <button
       onClick={() => setPage(p)}
       className="hover:text-emerald-400 transition font-medium"
@@ -18,7 +18,7 @@ export default function App() {
     </button>
   );
 
-  /* ---------------- TOKENOMICS DATA ---------------- */
+  /* ================= TOKENOMICS DATA ================= */
   const allocationData = {
     labels: [
       "Public Distribution",
@@ -44,7 +44,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-950 via-black to-black text-white">
-      {/* ---------------- HEADER ---------------- */}
+      {/* ================= HEADER ================= */}
       <header className="sticky top-0 z-50 backdrop-blur bg-black/70 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="text-2xl font-extrabold bg-gradient-to-r from-cyan-400 via-emerald-400 to-blue-400 bg-clip-text text-transparent">
@@ -66,7 +66,7 @@ export default function App() {
       </header>
 
       <AnimatePresence mode="wait">
-        {/* ================= HOME PAGE (UNCHANGED) ================= */}
+        {/* ================= HOME (UNCHANGED) ================= */}
         {page === "home" && (
           <motion.section
             key="home"
@@ -79,7 +79,7 @@ export default function App() {
           </motion.section>
         )}
 
-        {/* ================= MISSION PAGE ================= */}
+        {/* ================= MISSION ================= */}
         {page === "mission" && (
           <motion.section
             key="mission"
@@ -99,8 +99,8 @@ export default function App() {
                 </h3>
                 <p className="text-slate-300 mt-3">
                   Millions are excluded from traditional finance due to bad
-                  credit, lack of history, or location. Bad Credit Coin exists
-                  to remove those barriers and provide equal access to capital.
+                  credit or geography. We provide fair access to capital without
+                  discrimination.
                 </p>
               </div>
 
@@ -109,8 +109,8 @@ export default function App() {
                   Zero Interest Lending
                 </h3>
                 <p className="text-slate-300 mt-3">
-                  No interest. No compounding debt. Borrowers repay only what
-                  they borrow, restoring dignity and sustainability to lending.
+                  Borrowers repay exactly what they borrow — no interest, no
+                  compounding debt, no traps.
                 </p>
               </div>
 
@@ -129,8 +129,8 @@ export default function App() {
                   Global Expansion
                 </h3>
                 <p className="text-slate-300 mt-3">
-                  Borderless finance that works anywhere in the world without
-                  discrimination or centralized control.
+                  Borderless ethical finance for underserved communities
+                  worldwide.
                 </p>
               </div>
             </div>
@@ -151,9 +151,8 @@ export default function App() {
             </h1>
 
             <p className="text-slate-300 text-center max-w-4xl mx-auto">
-              Bad Credit Coin has a fixed supply designed to support sustainable
-              zero-interest lending, long-term ecosystem growth, and community
-              governance.
+              Fixed supply designed to support sustainable zero-interest
+              lending, governance, and ecosystem growth.
             </p>
 
             <div className="max-w-md mx-auto">
@@ -169,7 +168,7 @@ export default function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="py-24 px-6 max-w-5xl mx-auto space-y-10"
+            className="py-24 px-6 max-w-5xl mx-auto space-y-8"
           >
             <h1 className="text-5xl font-bold text-center text-emerald-400">
               White Paper
@@ -179,16 +178,13 @@ export default function App() {
 
             <ul className="space-y-4 text-slate-300">
               <li>
-                <strong>Phase 1:</strong> Platform launch, early users, credit
-                model testing.
+                <strong>Phase 1:</strong> Platform launch & early users
               </li>
               <li>
-                <strong>Phase 2:</strong> DAO governance, staking, protocol
-                decentralization.
+                <strong>Phase 2:</strong> DAO governance & decentralization
               </li>
               <li>
-                <strong>Phase 3:</strong> Global scaling, partnerships, real-
-                world adoption.
+                <strong>Phase 3:</strong> Global scaling & partnerships
               </li>
             </ul>
 
@@ -197,7 +193,7 @@ export default function App() {
               download
               className="inline-block px-6 py-3 rounded-lg bg-gradient-to-r from-emerald-400 to-cyan-400 text-black font-semibold"
             >
-              Download Full White Paper (PDF)
+              Download PDF
             </a>
           </motion.section>
         )}
