@@ -3,7 +3,9 @@ import { useState } from "react";
 const [showWhitepaper, setShowWhitepaper] = useState(false)
 
 export default function App() {
-  const [page, setPage] = useState<"home" | "mission" | "whitepaper" | "apply">("home");
+  const [page, setPage] = useState<
+  "home" | "mission" | "whitepaper" | "apply" | "tokenomics"
+>("home");
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-indigo-950 text-white">
