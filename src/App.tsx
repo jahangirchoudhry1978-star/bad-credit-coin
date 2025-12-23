@@ -106,24 +106,82 @@ export default function App() {
           </section>
         )}
 
-        {/* WHITE PAPER */}
-        {page === "whitepaper" && (
-          <section className="space-y-6 max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold">White Paper</h2>
-            <p className="text-gray-400">
-              Read the full protocol design, economic model, and governance framework.
-            </p>
+ {page === "whitepaper" && (
+  <section className="space-y-10 max-w-5xl mx-auto">
+    <div className="text-center space-y-2">
+      <h2 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-violet-400 bg-clip-text text-transparent">
+        Bad Credit Coin White Paper
+      </h2>
+      <p className="text-gray-400">Version 1.0 • Last Updated: January 2025</p>
+    </div>
 
-            <a
-              href="/Bad-Credit-Coin-Whitepaper.pdf"
-              download
-              className="inline-block mt-4 px-6 py-3 bg-indigo-600 rounded-lg font-semibold hover:bg-indigo-500"
-            >
-              Download PDF
-            </a>
-          </section>
-        )}
+    {/* Table of Contents */}
+    <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+      <h3 className="text-xl font-bold mb-3">Table of Contents</h3>
+      <ul className="list-disc list-inside text-gray-300 space-y-1">
+        <li>Problem Statement</li>
+        <li>Zero-Interest Lending Model</li>
+        <li>Monthly Fee Transparency</li>
+        <li>On-Chain Credit Building</li>
+        <li>Global Financial Inclusion</li>
+      </ul>
+    </div>
 
+    {/* Sections */}
+    <div className="space-y-6 text-gray-300">
+      <section>
+        <h3 className="text-2xl font-bold text-white">Problem Statement</h3>
+        <p>
+          Traditional finance relies on compounding interest and opaque credit systems that
+          trap underserved individuals in cycles of debt and exclusion.
+        </p>
+      </section>
+
+      <section>
+        <h3 className="text-2xl font-bold text-white">Zero-Interest Lending Model</h3>
+        <p>
+          Bad Credit Coin removes interest entirely. Borrowers repay a fixed amount with no
+          compounding penalties, creating fairness and predictability.
+        </p>
+      </section>
+
+      <section>
+        <h3 className="text-2xl font-bold text-white">Monthly Fee Transparency</h3>
+        <p>
+          A clearly disclosed monthly service fee replaces hidden interest, penalties, and
+          confusing repayment terms.
+        </p>
+      </section>
+
+      <section>
+        <h3 className="text-2xl font-bold text-white">On-Chain Credit Building</h3>
+        <p>
+          Repayment history is recorded on-chain, enabling users to rebuild trust and
+          financial reputation without legacy credit scores.
+        </p>
+      </section>
+
+      <section>
+        <h3 className="text-2xl font-bold text-white">Global Financial Inclusion</h3>
+        <p>
+          The protocol is designed to scale globally, providing ethical, interest-free
+          financial tools across borders.
+        </p>
+      </section>
+    </div>
+
+    {/* Download */}
+    <div className="text-center pt-6">
+      <a
+        href="/Bad-Credit-Coin-Whitepaper.pdf"
+        download
+        className="inline-block px-8 py-4 bg-gradient-to-r from-cyan-400 to-violet-400 text-black font-semibold rounded-xl"
+      >
+        Download Full White Paper (PDF)
+      </a>
+    </div>
+  </section>
+)}
         {/* APPLY */}
         {page === "apply" && (
           <section className="max-w-xl mx-auto text-center space-y-6">
