@@ -182,35 +182,40 @@ export default function App() {
             exit={{ opacity: 0 }}
             className="py-24 px-6 max-w-5xl mx-auto space-y-8"
           >
-            <h1 className="text-5xl font-bold text-center text-emerald-400">
-              DAO Governance
-            </h1>
+          <h1 className="text-5xl font-bold text-center text-emerald-400">
+          DAO Governance
+         </h1>
 
-            {[
-              {
-                title: "Proposal #1 — Lending Pool Expansion",
-                desc: "Increase lending pool allocation to support higher borrower demand.",
-              },
-              {
-                title: "Proposal #2 — Fee Adjustment",
-                desc: "Reduce monthly service fee for long-term borrowers.",
-              },
-            ].map((p) => (
-              <div key={p.title} className="bg-white/5 p-6 rounded-xl">
-                <h3 className="text-xl font-bold text-emerald-400">
-                  {p.title}
-                </h3>
-                <p className="text-slate-300 mt-3">{p.desc}</p>
-                <div className="flex gap-4 mt-4">
-                  <button className="px-4 py-2 bg-emerald-400 text-black rounded">
-                    Vote Yes
-                  </button>
-                  <button className="px-4 py-2 border border-red-400 text-red-400 rounded">
-                    Vote No
-                  </button>
-                </div>
-              </div>
-            ))}
+         <div className="bg-white/5 p-6 rounded-xl space-y-4">
+        <h3 className="text-xl font-bold text-emerald-400">
+    Proposal #1 — Lending Pool Expansion
+  </h3>
+
+  <p className="text-slate-300">
+    Increase the lending pool allocation to support higher borrower demand
+    while maintaining zero-interest principles.
+  </p>
+
+  <div className="flex gap-6 items-center">
+    <button
+      onClick={() => alert("Vote recorded: YES")}
+      className="px-4 py-2 bg-emerald-400 text-black rounded font-semibold"
+    >
+      Vote Yes
+    </button>
+
+    <button
+      onClick={() => alert("Vote recorded: NO")}
+      className="px-4 py-2 border border-red-400 text-red-400 rounded font-semibold"
+    >
+      Vote No
+    </button>
+  </div>
+
+  <p className="text-sm text-slate-400">
+    * On-chain voting will be enabled in a future release.
+  </p>
+</div>
           </motion.section>
         )}
 
