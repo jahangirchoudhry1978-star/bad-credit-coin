@@ -137,7 +137,7 @@ export default function App() {
       <AnimatePresence mode="wait">
 
 
- {/* HOME */}
+      {/* HOME */}
         {page === "home" && (
           <motion.section
             key="home"
@@ -180,6 +180,14 @@ export default function App() {
               </p>
             </section>
 
+            {/* Invest and Earn */}
+            <section className="space-y-6 max-w-5xl mx-auto">
+              <h2 className="text-4xl font-bold text-emerald-400">Invest and Earn</h2>
+              <p className="text-slate-300">
+             BCC will intoduce Invest and Earn within 6 months after Launch to Join our growth trajectory with a flexible investment tailored to your capacity, earning up to 50% profit sharing . 
+             This partnership bridges the gap between capital and consistent, scalable monthly dividends.
+              </p>
+            </section>
             {/* TOKENOMICS SUMMARY */}
             <section className="grid md:grid-cols-2 gap-12 items-center">
               <div>
@@ -252,6 +260,9 @@ export default function App() {
                 "Global Financial Inclusion",
                 "Designed to scale globally, bringing ethical finance to underserved populations worldwide.By leveraging blockchain technology, we aim to bring ethical, interest-free financial tools to underserved populations worldwide, enabling economic participation regardless of location or background",
               ],
+              [
+                "Investment Options",
+                "Invest any amount and Earn up to 50% of monthly fee,Partner with us and receive half of all recurring user subscription revenue — no minimum investment required, transparent returns monthly, (Available after 6 Months) ",             ],
             ].map(([title, desc]) => (
               <div key={title} className="bg-white/5 p-6 rounded-xl">
                 <h3 className="text-xl font-bold text-emerald-400">{title}</h3>
@@ -287,6 +298,13 @@ export default function App() {
                 <div className="flex gap-4 mt-4">
                   <button className="px-4 py-2 bg-emerald-500 rounded">Vote Yes</button>
                   <button className="px-4 py-2 bg-red-500 rounded">Vote No</button>
+                </div>
+              </div>
+              <div className="bg-white/5 p-6 rounded-xl">
+                <h3 className="text-xl font-bold">Proposal #3: Increase/Decrease Monthly Fee</h3>
+                <div className="flex gap-4 mt-4">
+                  <button className="px-4 py-2 bg-emerald-500 rounded">Vote Increase</button>
+                  <button className="px-4 py-2 bg-red-500 rounded">Vote Decrease</button>
                 </div>
               </div>
             </div>
@@ -325,13 +343,17 @@ export default function App() {
           >
             <h1 className="text-5xl font-bold text-center text-emerald-400">White Paper</h1>
             <p className="text-slate-300">
-              This document outlines the protocol design, governance framework, and economic model.
+              BCC aims to redefine Global lending by proving that credit does not need Interest to be profitable or Sustainable.
+              This document outlines the Vision for the Future,protocol design, governance framework, and economic model.
             </p>
             <h3 className="text-xl font-bold text-emerald-400">Roadmap</h3>
             <ul className="space-y-4 text-slate-300">
               <li><strong>Phase 1:</strong> Protocol launch and early adoption</li>
-              <li><strong>Phase 2:</strong> DAO governance activation</li>
-              <li><strong>Phase 3:</strong> Global expansion</li>
+              <li><strong>Phase 2:</strong> Personal Lending</li>
+              <li><strong>Phase 3:</strong> Payday Loan Products</li>
+               <li><strong>Phase 4:</strong> Credit Card Lending </li>
+              <li><strong>Phase 5:</strong> DAO governance activation</li>
+              <li><strong>Phase 6:</strong> Global expansion</li>
             </ul>
             <a
               href="/Bad-Credit-Coin-Whitepaper.pdf"
@@ -376,4 +398,3 @@ export default function App() {
     </div>
   );
 }
-
