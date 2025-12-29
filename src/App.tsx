@@ -27,9 +27,12 @@ type Page = "home" | "mission" | "tokenomics" | "whitepaper" | "governance" | "a
 // Main App
 // --------------------
 export default function App() {
+const [menuOpen, setMenuOpen] = useState(false);
+const [dropdownOpen, setDropdownOpen] = useState(false);
+
   const [page, setPage] = useState<Page>("home");
   const [wallet, setWallet] = useState<string | null>(null);
-  const [menuOpen, setMenuOpen] = useState(false);
+  
 
   // --------------------
   // MetaMask connect
@@ -87,38 +90,103 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-950 via-black to-black text-white">
       {/* HEADER */}
+          
       <header className="sticky top-0 z-50 backdrop-blur bg-black/70 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src="/logo.png" alt="Bad Credit Coin" className="h-9 w-9 object-contain" />
+            <img
+              src="/logo.png"
+              alt="Bad Credit Coin"
+              className="h-9 w-9 object-contain"
+            />
             <span className="text-2xl font-extrabold bg-gradient-to-r from-cyan-400 via-emerald-400 to-blue-400 bg-clip-text text-transparent">
               Bad Credit Coin
             </span>
           </div>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex gap-8 text-sm">
-            <Nav label="Home" p="home" />
-            <Nav label="Mission" p="mission" />
-            <Nav label="Tokenomics" p="tokenomics" />
-            <Nav label="White Paper" p="whitepaper" />
-            <Nav label="Governance" p="governance" />
-            <Nav label="Apply" p="apply" />
-          </nav>
+          <nav className="hidden md:flex items-center gap-8 text-sm relative">
+  <button
+    onClick={() => setPage("home")}
+    className="hover:text-emerald-400"
+  >
+    Home
+  </button>
 
+  <button
+    onClick={() => setPage("mission")}
+    className="hover:text-emerald-400"
+  >
+    Mission
+  </button>
+
+  <button
+    onClick={() => setPage("tokenomics")}
+    className="hover:text-emerald-400"
+  >
+    Tokenomics
+  </button>
+
+  {/* DROPDOWN */}
+  <div className="relative">
+    <button
+      onClick={() => setDropdownOpen(!dropdownOpen)}
+      className="hover:text-emerald-400 flex items-center gap-1"
+    >
+      More ▾
+    </button>
+
+    {dropdownOpen && (
+      <div className="absolute right-0 mt-2 w-44 rounded-lg bg-black/90 border border-white/10 shadow-lg">
+        <button
+          onClick={() => {
+            setPage("whitepaper");
+            setDropdownOpen(false);
+          }}
+          className="block w-full text-left px-4 py-2 hover:bg-white/10"
+        >
+          White Paper
+        </button>
+
+        <button
+          onClick={() => {
+            setPage("governance");
+            setDropdownOpen(false);
+          }}
+          className="block w-full text-left px-4 py-2 hover:bg-white/10"
+        >
+          Governance
+        </button>
+
+        <button
+          onClick={() => {
+            setPage("apply");
+            setDropdownOpen(false);
+          }}
+          className="block w-full text-left px-4 py-2 hover:bg-white/10"
+        >
+          Apply
+        </button>
+      </div>
+    )}
+  </div>
+</nav>
           {/* Right */}
           <div className="flex items-center gap-4">
             <button
               onClick={connectWallet}
               className="px-4 py-2 rounded-lg bg-gradient-to-r from-emerald-400 to-cyan-400 text-black font-semibold"
             >
-              {wallet ? `${wallet.slice(0, 6)}...${wallet.slice(-4)}` : "Connect Wallet"}
+              {wallet
+                ? `${wallet.slice(0, 6)}...${wallet.slice(-4)}`
+                : "Connect Wallet"}
             </button>
-
-            {/* Mobile menu */}
-            <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
+             <button
+               className="md:hidden text-2xl"
+               onClick={() => setMenuOpen(!menuOpen)}
+               >
               ☰
-            </button>
+             </button>
           </div>
         </div>
 
@@ -132,7 +200,35 @@ export default function App() {
             <Nav label="Apply" p="apply" />
           </div>
         )}
+
       </header>
+       {menuOpen && (
+  <div className="md:hidden bg-black/95 border-b border-white/10 px-6 py-4 space-y-4">
+    <button onClick={() => setPage("home")} className="block w-full text-left">
+      Home
+    </button>
+
+    <button onClick={() => setPage("mission")} className="block w-full text-left">
+      Mission
+    </button>
+
+    <button onClick={() => setPage("tokenomics")} className="block w-full text-left">
+      Tokenomics
+    </button>
+
+    <button onClick={() => setPage("whitepaper")} className="block w-full text-left">
+      White Paper
+    </button>
+
+    <button onClick={() => setPage("governance")} className="block w-full text-left">
+      Governance
+    </button>
+
+    <button onClick={() => setPage("apply")} className="block w-full text-left">
+      Apply
+    </button>
+  </div>
+)}
 
       <AnimatePresence mode="wait">
 
