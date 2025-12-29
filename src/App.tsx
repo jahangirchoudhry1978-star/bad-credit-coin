@@ -27,48 +27,50 @@ type Page = "home" | "mission" | "tokenomics" | "whitepaper" | "governance" | "a
 // Main App
 // --------------------
 export default function App() {
+const [walletAddress, setWalletAddress] = useState<string | null>(null);
+
 const [menuOpen, setMenuOpen] = useState(false);
 const [dropdownOpen, setDropdownOpen] = useState(false);
+const [page, setPage] = useState<Page>("home");
+ 
 
-  const [page, setPage] = useState<Page>("home");
-  const [walletAddress, setWalletAddress] = useState<string | null>(null);
-
-  
 
   // --------------------
   // MetaMask connect
   // --------------------
-  const connectWallet = async () => {
-  if (!window.ethereum) {
-    alert("MetaMask is not installed");
-    return;
-  }
-
+const connectWallet = async () => {
   try {
+    if (!window.ethereum) {
+      alert("MetaMask not installed");
+      return;
+    }
+
     const accounts = await window.ethereum.request({
       method: "eth_requestAccounts",
     });
 
-    if (accounts && accounts.length > 0) {
-      setWalletAddress(accounts[0]);
-    }
-  } catch (err) {
-    console.error("Wallet connection failed", err);
+    setWalletAddress(accounts[0]);
+  } catch (error) {
+    console.error("Wallet connection failed:", error);
   }
 };
 
+    
+
 
 useEffect(() => {
-  if (!window.ethereum) return;
+  const eth = window.ethereum;
+  if (!eth || !eth.on) return;
 
   const handler = (accounts: string[]) => {
-    setWallet(accounts[0] ?? null);
+  setWalletAddress(accounts[0] ?? null);
+
   };
 
-  window.ethereum.on?.("accountsChanged", handler);
+  eth.on("accountsChanged", handler);
 
   return () => {
-    window.ethereum.removeListener?.("accountsChanged", handler);
+    eth.removeListener?.("accountsChanged", handler);
   };
 }, []);
 
