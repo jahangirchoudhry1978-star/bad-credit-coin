@@ -58,16 +58,20 @@ const [dropdownOpen, setDropdownOpen] = useState(false);
 };
 
 
-  useEffect(() => {
-    if (!window.ethereum?.on) return;
+useEffect(() => {
+  if (!window.ethereum) return;
 
-    const handler = (accounts: string[]) => {
-      setWallet(accounts[0] ?? null);
-    };
+  const handler = (accounts: string[]) => {
+    setWallet(accounts[0] ?? null);
+  };
 
-    window.ethereum.on("accountsChanged", handler);
-    return () => window.ethereum?.removeListener?.("accountsChanged", handler);
-  }, []);
+  window.ethereum.on?.("accountsChanged", handler);
+
+  return () => {
+    window.ethereum.removeListener?.("accountsChanged", handler);
+  };
+}, []);
+
 
   const Nav = ({ label, p }: { label: string; p: Page }) => (
     <button
