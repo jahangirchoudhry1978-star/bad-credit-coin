@@ -50,8 +50,8 @@ const connectWallet = async () => {
     });
 
     setWalletAddress(accounts[0]);
-  } catch (error) {
-    console.error("Wallet connection failed:", error);
+  } catch (err) {
+    console.error("Wallet connection error:", err);
   }
 };
 
@@ -73,19 +73,6 @@ useEffect(() => {
     eth.removeListener?.("accountsChanged", handler);
   };
 }, []);
-
-
-  const Nav = ({ label, p }: { label: string; p: Page }) => (
-    <button
-      onClick={() => {
-        setPage(p);
-        setMenuOpen(false);
-      }}
-      className="hover:text-emerald-400 transition"
-    >
-      {label}
-    </button>
-  );
 
   // --------------------
   // Tokenomics Chart
@@ -202,49 +189,77 @@ useEffect(() => {
 >
   ☰
 </button>
-             <button
-               className="md:hidden text-2xl"
-               onClick={() => setMenuOpen(!menuOpen)}
-               >
-              ☰
-             </button>
+
           </div>
         </div>
 
+  {/* ================= MOBILE DROPDOWN MENU ================= */}
+  {menuOpen && (
+    <nav className="md:hidden bg-black/90 px-6 py-4 space-y-3 border-t border-white/10">
 
+      <button
+        onClick={() => {
+          setPage("home");
+          setMenuOpen(false);
+        }}
+        className="block w-full text-left hover:text-emerald-400"
+      >
+        Home
+      </button>
+
+      <button
+        onClick={() => {
+          setPage("mission");
+          setMenuOpen(false);
+        }}
+        className="block w-full text-left hover:text-emerald-400"
+      >
+        Mission
+      </button>
+
+      <button
+        onClick={() => {
+          setPage("tokenomics");
+          setMenuOpen(false);
+        }}
+        className="block w-full text-left hover:text-emerald-400"
+      >
+        Tokenomics
+      </button>
+
+      <button
+        onClick={() => {
+          setPage("whitepaper");
+          setMenuOpen(false);
+        }}
+        className="block w-full text-left hover:text-emerald-400"
+      >
+        White Paper
+      </button>
+
+      <button
+        onClick={() => {
+          setPage("governance");
+          setMenuOpen(false);
+        }}
+        className="block w-full text-left hover:text-emerald-400"
+      >
+        Governance
+      </button>
+
+      <button
+        onClick={() => {
+          setPage("apply");
+          setMenuOpen(false);
+        }}
+        className="block w-full text-left hover:text-emerald-400"
+      >
+        Apply
+      </button>
+    </nav>
+  )}
 
       </header>
-      
-
-
-             {menuOpen && (
-  <div className="md:hidden bg-black/95 border-b border-white/10 px-6 py-4 space-y-4">
-    <button onClick={() => setPage("home")} className="block w-full text-left">
-      Home
-    </button>
-
-    <button onClick={() => setPage("mission")} className="block w-full text-left">
-      Mission
-    </button>
-
-    <button onClick={() => setPage("tokenomics")} className="block w-full text-left">
-      Tokenomics
-    </button>
-
-    <button onClick={() => setPage("whitepaper")} className="block w-full text-left">
-      White Paper
-    </button>
-
-    <button onClick={() => setPage("governance")} className="block w-full text-left">
-      Governance
-    </button>
-
-    <button onClick={() => setPage("apply")} className="block w-full text-left">
-      Apply
-    </button>
-  </div>
-)}
-
       <AnimatePresence mode="wait">
 
 
