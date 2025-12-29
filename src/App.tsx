@@ -262,7 +262,6 @@ useEffect(() => {
       </header>
       <AnimatePresence mode="wait">
 
-
       {/* HOME */}
         {page === "home" && (
           <motion.section
@@ -272,6 +271,30 @@ useEffect(() => {
             exit={{ opacity: 0 }}
             className="py-24 px-6 max-w-7xl mx-auto space-y-20"
           >
+            {/* Buy $BCC Button */}
+<div className="flex justify-center mt-8">
+  <a
+    href="#"
+    onClick={(e) => {
+      e.preventDefault();
+      alert("Buy $BCC coming soon");
+    }}
+    className="
+      px-8 py-4
+      rounded-xl
+      text-lg
+      font-bold
+      bg-gradient-to-r from-emerald-400 to-cyan-400
+      text-black
+      hover:scale-105
+      transition-transform
+      shadow-lg
+    "
+  >
+    Buy $BCC
+  </a>
+</div>
+
             {/* HERO */}
             <section className="text-center space-y-6">
               <h1 className="text-6xl font-extrabold">
