@@ -537,22 +537,22 @@ useEffect(() => {
       </AnimatePresence>
 
 {/* FOOTER */}
-<footer className="mt-24 border-t border-white/6 bg-black/90">
-  <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col items-center gap-6">
+<footer className="mt-32 border-t border-white/10 bg-black/90 dark:bg-black">
+  <div className="max-w-3xl mx-auto px-6 py-10 flex flex-col items-center gap-6">
 
     {/* Social Icons */}
-    <div className="flex items-center gap-8">
-      
+    <div className="flex items-center gap-10">
+
       {/* Telegram */}
       <a
         href="https://t.me/Badcreditcoin"
         target="_blank"
         rel="noopener noreferrer"
-        className="hover:scale-110 transition"
         aria-label="Telegram"
+        className="transition transform hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(52,211,153,0.6)]"
       >
         <svg
-          className="w-7 h-7 text-white hover:text-emerald-400"
+          className="w-7 h-7 text-gray-200 hover:text-emerald-400 transition"
           fill="currentColor"
           viewBox="0 0 24 24"
         >
@@ -565,11 +565,11 @@ useEffect(() => {
         href="https://x.com/Badcreditcoin"
         target="_blank"
         rel="noopener noreferrer"
-        className="hover:scale-110 transition"
         aria-label="X"
+        className="transition transform hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(52,211,153,0.6)]"
       >
         <svg
-          className="w-7 h-7 text-white hover:text-emerald-400"
+          className="w-7 h-7 text-gray-200 hover:text-emerald-400 transition"
           viewBox="0 0 24 24"
           fill="currentColor"
         >
@@ -582,11 +582,11 @@ useEffect(() => {
         href="https://www.instagram.com/badcreditcoin"
         target="_blank"
         rel="noopener noreferrer"
-        className="hover:scale-110 transition"
         aria-label="Instagram"
+        className="transition transform hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(52,211,153,0.6)]"
       >
         <svg
-          className="w-7 h-7 text-white hover:text-emerald-400"
+          className="w-7 h-7 text-gray-200 hover:text-emerald-400 transition"
           fill="currentColor"
           viewBox="0 0 24 24"
         >
@@ -597,7 +597,7 @@ useEffect(() => {
     </div>
 
     {/* Copyright */}
-    <div className="text-sm text-gray-400 text-center">
+    <div className="text-sm text-gray-400 text-center tracking-wide">
       © {new Date().getFullYear()} All rights reserved ·{" "}
       <span className="text-gray-300">badcreditcoin.com</span>
     </div>
