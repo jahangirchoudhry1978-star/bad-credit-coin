@@ -31,24 +31,32 @@ const [menuOpen, setMenuOpen] = useState(false);
 const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const [page, setPage] = useState<Page>("home");
-  const [wallet, setWallet] = useState<string | null>(null);
+  const [walletAddress, setWalletAddress] = useState<string | null>(null);
+
   
 
   // --------------------
   // MetaMask connect
   // --------------------
   const connectWallet = async () => {
-    if (!window.ethereum) {
-      alert("MetaMask is not installed");
-      return;
-    }
+  if (!window.ethereum) {
+    alert("MetaMask is not installed");
+    return;
+  }
 
+  try {
     const accounts = await window.ethereum.request({
       method: "eth_requestAccounts",
     });
 
-    setWallet(accounts[0]);
-  };
+    if (accounts && accounts.length > 0) {
+      setWalletAddress(accounts[0]);
+    }
+  } catch (err) {
+    console.error("Wallet connection failed", err);
+  }
+};
+
 
   useEffect(() => {
     if (!window.ethereum?.on) return;
@@ -105,7 +113,8 @@ const [dropdownOpen, setDropdownOpen] = useState(false);
           </div>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8 text-sm relative">
+          <nav className="hidden md:flex gap-6">
+
   <button
     onClick={() => setPage("home")}
     className="hover:text-emerald-400"
@@ -174,13 +183,19 @@ const [dropdownOpen, setDropdownOpen] = useState(false);
           {/* Right */}
           <div className="flex items-center gap-4">
             <button
-              onClick={connectWallet}
-              className="px-4 py-2 rounded-lg bg-gradient-to-r from-emerald-400 to-cyan-400 text-black font-semibold"
-            >
-              {wallet
-                ? `${wallet.slice(0, 6)}...${wallet.slice(-4)}`
-                : "Connect Wallet"}
-            </button>
+  onClick={connectWallet}
+  className="px-4 py-2 rounded-lg bg-gradient-to-r from-emerald-400 to-cyan-400 text-black font-semibold"
+>
+  {walletAddress
+    ? `${walletAddress.slice(0, 6)}...${walletAddress.slice(-4)}`
+    : "Connect Wallet"}
+</button>
+<button
+  className="md:hidden text-white text-2xl"
+  onClick={() => setMenuOpen(!menuOpen)}
+>
+  ☰
+</button>
              <button
                className="md:hidden text-2xl"
                onClick={() => setMenuOpen(!menuOpen)}
@@ -202,7 +217,27 @@ const [dropdownOpen, setDropdownOpen] = useState(false);
         )}
 
       </header>
-       {menuOpen && (
+      
+      {menuOpen && (
+  <div className="md:hidden bg-black border-t border-white/10 px-6 py-4 space-y-4">
+    {["home", "mission", "tokenomics", "whitepaper", "governance", "apply"].map(
+      (p) => (
+        <button
+          key={p}
+          onClick={() => {
+            setPage(p as any);
+            setMenuOpen(false);
+          }}
+          className="block w-full text-left text-white hover:text-emerald-400"
+        >
+          {p.charAt(0).toUpperCase() + p.slice(1)}
+        </button>
+      )
+    )}
+  </div>
+)}
+
+             {menuOpen && (
   <div className="md:hidden bg-black/95 border-b border-white/10 px-6 py-4 space-y-4">
     <button onClick={() => setPage("home")} className="block w-full text-left">
       Home
