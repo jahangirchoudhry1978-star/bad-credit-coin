@@ -211,37 +211,11 @@ useEffect(() => {
           </div>
         </div>
 
-        {menuOpen && (
-          <div className="md:hidden bg-black/90 px-6 py-4 space-y-3">
-            <Nav label="Home" p="home" />
-            <Nav label="Mission" p="mission" />
-            <Nav label="Tokenomics" p="tokenomics" />
-            <Nav label="White Paper" p="whitepaper" />
-            <Nav label="Governance" p="governance" />
-            <Nav label="Apply" p="apply" />
-          </div>
-        )}
+
 
       </header>
       
-      {menuOpen && (
-  <div className="md:hidden bg-black border-t border-white/10 px-6 py-4 space-y-4">
-    {["home", "mission", "tokenomics", "whitepaper", "governance", "apply"].map(
-      (p) => (
-        <button
-          key={p}
-          onClick={() => {
-            setPage(p as any);
-            setMenuOpen(false);
-          }}
-          className="block w-full text-left text-white hover:text-emerald-400"
-        >
-          {p.charAt(0).toUpperCase() + p.slice(1)}
-        </button>
-      )
-    )}
-  </div>
-)}
+
 
              {menuOpen && (
   <div className="md:hidden bg-black/95 border-b border-white/10 px-6 py-4 space-y-4">
