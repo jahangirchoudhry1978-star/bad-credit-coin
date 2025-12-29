@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Doughnut } from "react-chartjs-2";
 import "chart.js/auto";
-import { Twitter, Instagram } from "lucide-react";
+
 
 // --------------------
 // MetaMask typing (TypeScript safe)
@@ -536,14 +536,75 @@ useEffect(() => {
         )}
       </AnimatePresence>
 
-      {/* FOOTER */}
-      <footer className="border-t border-white/10 py-8 text-center">
-        <div className="flex justify-center gap-6 text-2xl">
-          <a href="https://t.me/Badcreditcoin" target="_blank">Telegram</a>
-          <a href="https://www.instagram.com/badcreditcoin" target="_blank"><Instagram /></a>
-          <a href="https://x.com/Badcreditcoin" target="_blank"><Twitter /></a>
-        </div>
-      </footer>
+{/* FOOTER */}
+<footer className="mt-24 border-t border-white/6 bg-black/90">
+  <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col items-center gap-6">
+
+    {/* Social Icons */}
+    <div className="flex items-center gap-8">
+      
+      {/* Telegram */}
+      <a
+        href="https://t.me/Badcreditcoin"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:scale-110 transition"
+        aria-label="Telegram"
+      >
+        <svg
+          className="w-7 h-7 text-white hover:text-emerald-400"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M9.993 15.674 9.84 19.57c.287 0 .412-.124.564-.272l1.355-1.298 2.81 2.055c.516.284.88.136 1.017-.477l1.843-8.67c.2-.926-.336-1.287-.842-1.1L6.24 13.2c-.903.352-.89.858-.154 1.086l2.52.788 5.845-3.682c.276-.17.53-.076.323.095z" />
+        </svg>
+      </a>
+
+      {/* X / Twitter */}
+      <a
+        href="https://x.com/Badcreditcoin"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:scale-110 transition"
+        aria-label="X"
+      >
+        <svg
+          className="w-7 h-7 text-white hover:text-emerald-400"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+        >
+          <path d="M18.244 2H21.56l-7.23 8.26L22.5 22h-6.56l-5.13-6.72L4.5 22H1.18l7.74-8.85L1.5 2h6.68l4.63 6.11z" />
+        </svg>
+      </a>
+
+      {/* Instagram */}
+      <a
+        href="https://www.instagram.com/badcreditcoin"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:scale-110 transition"
+        aria-label="Instagram"
+      >
+        <svg
+          className="w-7 h-7 text-white hover:text-emerald-400"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5zm10 2a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm5.5-.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z" />
+        </svg>
+      </a>
+
+    </div>
+
+    {/* Copyright */}
+    <div className="text-sm text-gray-400 text-center">
+      © {new Date().getFullYear()} All rights reserved ·{" "}
+      <span className="text-gray-300">badcreditcoin.com</span>
+    </div>
+
+  </div>
+</footer>
+
     </div>
   );
 }
