@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Doughnut } from "react-chartjs-2";
 import "chart.js/auto";
+import Presale from "./Presale";
 
 
 // --------------------
@@ -18,12 +19,7 @@ declare global {
   }
 }
 
-// --------------------
-// Types
-// --------------------
-type Page = "home" | "mission" | "tokenomics" | "whitepaper" | "governance" | "apply";
 
-// --------------------
 // Main App
 // --------------------
 export default function App() {
@@ -31,11 +27,17 @@ const [walletAddress, setWalletAddress] = useState<string | null>(null);
 
 const [menuOpen, setMenuOpen] = useState(false);
 const [dropdownOpen, setDropdownOpen] = useState(false);
-const [page, setPage] = useState<Page>("home");
- 
+const [page, setPage] = useState<
+  | "home"
+  | "mission"
+  | "tokenomics"
+  | "whitepaper"
+  | "governance"
+  | "apply"
+  | "presale"
+>("home");
 
-
-  // --------------------
+ // --------------------
   // MetaMask connect
   // --------------------
 const connectWallet = async () => {
@@ -54,9 +56,6 @@ const connectWallet = async () => {
     console.error("Wallet connection error:", err);
   }
 };
-
-    
-
 
 useEffect(() => {
   const eth = window.ethereum;
@@ -169,10 +168,17 @@ useEffect(() => {
         >
           Apply
         </button>
-      </div>
-    )}
-  </div>
-</nav>
+         <button
+          onClick={() => setPage("presale")}
+          className="block w-full text-left px-4 py-2 hover:bg-white/10"
+          >
+          Presale
+         </button>
+
+         </div>
+         )}
+        </div>
+        </nav>
           {/* Right */}
           <div className="flex items-center gap-4">
             <button
@@ -256,6 +262,16 @@ useEffect(() => {
       >
         Apply
       </button>
+      <button
+       onClick={() => {
+       setPage("presale");
+       setMenuOpen(false);
+       }}
+       className="block w-full text-left hover:text-emerald-400"
+        >
+       Presale
+       </button>
+
     </nav>
   )}
 
@@ -271,14 +287,10 @@ useEffect(() => {
             exit={{ opacity: 0 }}
             className="py-24 px-6 max-w-7xl mx-auto space-y-20"
           >
-            {/* Buy $BCC Button */}
+{/* Buy $BCC Button */}
 <div className="flex justify-center mt-8">
-  <a
-    href="#"
-    onClick={(e) => {
-      e.preventDefault();
-      alert("Buy $BCC coming soon");
-    }}
+  <button
+    onClick={() => setPage("presale")}
     className="
       px-8 py-4
       rounded-xl
@@ -292,10 +304,9 @@ useEffect(() => {
     "
   >
     Buy $BCC
-  </a>
+  </button>
 </div>
-
-            {/* HERO */}
+      {/* HERO */}
             <section className="text-center space-y-6">
               <h1 className="text-6xl font-extrabold">
                 Fair Credit. <span className="text-emerald-400">Zero Interest.</span>
@@ -534,6 +545,18 @@ useEffect(() => {
             </form>
           </motion.section>
         )}
+        {/* PRESALE */}
+{page === "presale" && (
+  <motion.section
+    key="presale"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    className="py-24 px-6 max-w-4xl mx-auto"
+  >
+    <Presale />
+  </motion.section>
+)}
       </AnimatePresence>
 
 {/* FOOTER */}
