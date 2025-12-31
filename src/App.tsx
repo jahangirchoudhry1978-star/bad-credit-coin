@@ -305,9 +305,6 @@ useEffect(() => {
   >
     Buy $BCC
   </button>
-              <p className="text-slate-300 max-w-3xl mx-auto">
-               The $BCC presale contract is being prepared for third-party security auditing ahead of launch.
-              </p>
 </div>
       {/* HERO */}
             <section className="text-center space-y-6">
@@ -340,6 +337,14 @@ useEffect(() => {
              Bad Credit Coin is a decentralized financial ecosystem designed to give people a second chance. We eliminate predatory interest models and replace them with transparent, community‑governed lending.
              Bad Credit Coin is built on the principle that interest-based lending disproportionately harms individuals with limited financial access. 
              Traditional lenders profit from compounding interest, trapping borrowers in cycles of debt that are difficult to escape.
+              </p>
+            </section>
+            
+             {/* Presale Smart Contract */}
+            <section className="space-y-6 max-w-5xl mx-auto">
+              <h2 className="text-4xl font-bold text-emerald-400">Invest and Earn</h2>
+              <p className="text-slate-300">
+             The $BCC presale smart contract is being prepared for thirs-party security auditing ahead of launch.
               </p>
             </section>
 
