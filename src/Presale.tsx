@@ -36,13 +36,20 @@ export default function Presale() {
 </p>
 
 <input
-  type="text"
-  value="H7GbbP9SGb9VtUVJFXoesnQjcJk1XpXAFHTyMzNx4AaD"
-  readOnly
-  className="w-full p-3 rounded bg-black/40 border border-white/10 text-emerald-400 font-mono"
-/>
-
+         type="text"
+        value="H7GbbP9SGb9VtUVJFXoesnQjcJk1XpXAFHTyMzNx4AaD"
+        readOnly
+        className="w-full p-3 rounded bg-black/40 border border-white/10 text-emerald-400 font-mono"
+        />
         </div>
+        <div className="flex justify-center mt-4">
+  <img
+    src="/solana-qr.png"
+    alt="Solana QR Code"
+    className="w-48 h-48 rounded-lg border border-white/10"
+  />
+</div>
+
 
         {/* Payment Option 2 */}
         <div>
