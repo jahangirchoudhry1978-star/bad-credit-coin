@@ -305,6 +305,9 @@ useEffect(() => {
   >
     Buy $BCC
   </button>
+              <p className="text-slate-300 max-w-3xl mx-auto">
+               The $BCC presale contract is being prepared for third-party security auditing ahead of launch.
+              </p>
 </div>
       {/* HERO */}
             <section className="text-center space-y-6">
@@ -503,6 +506,10 @@ useEffect(() => {
           >
             <h1 className="text-5xl font-bold text-center text-emerald-400">White Paper</h1>
             <p className="text-slate-300">
+             Prior to token distribution, the Bad Credit Coin smart contract will undergo a comprehensive third-party security audit to ensure transparency, safety, and investor protection.
+            </p>
+            
+           <p className="text-slate-300">
               BCC aims to redefine Global lending by proving that credit does not need Interest to be profitable or Sustainable.
               This document outlines the Vision for the Future,protocol design, governance framework, and economic model.
             </p>
