@@ -342,7 +342,7 @@ useEffect(() => {
             
              {/* Presale Smart Contract */}
             <section className="space-y-6 max-w-5xl mx-auto">
-              <h2 className="text-4xl font-bold text-emerald-400">Invest and Earn</h2>
+              <h2 className="text-4xl font-bold text-emerald-400">Presale Smart Contract</h2>
               <p className="text-slate-300">
              The $BCC presale smart contract is being prepared for thirs-party security auditing ahead of launch.
               </p>
@@ -497,6 +497,14 @@ useEffect(() => {
             <div className="max-w-md mx-auto">
               <Doughnut data={allocationData} />
             </div>
+            <div className="mt-8 text-center text-sm text-slate-400">
+  Presale funds are managed transparently with manual verification.
+  <br />
+  <span className="text-emerald-400 font-semibold">
+    🔐 Smart Contract Audit — Coming Soon
+  </span>
+</div>
+
           </motion.section>
         )}
 
@@ -570,6 +578,12 @@ useEffect(() => {
   </motion.section>
 )}
       </AnimatePresence>
+<div className="mt-10 text-center text-sm text-slate-400">
+  ✔ Transparent Presale &nbsp;•&nbsp; ✔ Manual Verification &nbsp;•&nbsp;
+  <span className="text-emerald-400 font-semibold">
+    🔐 Smart Contract Audit Scheduled
+  </span>
+</div>
 
 {/* FOOTER */}
 <footer className="mt-32 border-t border-white/10 bg-black/90 dark:bg-black">

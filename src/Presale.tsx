@@ -136,6 +136,22 @@ export default function Presale() {
             upon launch.
           </p>
         </div>
+         {/* 🔐 Smart Contract Security Section (NEW) */}
+        <div className="mt-10 p-6 rounded-xl bg-black/40 border border-white/10">
+          <h3 className="text-xl font-bold text-emerald-400 mb-2">
+            Smart Contract Security
+          </h3>
+
+          <p className="text-slate-300 text-sm leading-relaxed">
+            The $BCC presale smart contract is currently under internal review and
+            scheduled for third-party security auditing prior to public token
+            distribution.
+          </p>
+
+          <p className="mt-3 text-emerald-400 font-semibold">
+            🔐 Smart Contract Audit — Coming Soon
+          </p>
+        </div>
 
         {/* Footer note */}
         <p className="text-sm text-slate-400 mt-10 text-center">
