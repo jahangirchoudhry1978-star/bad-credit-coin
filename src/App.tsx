@@ -430,8 +430,10 @@ useEffect(() => {
               ],
               [
                 "Investment Options",
-                "Invest any amount and Earn up to 50% of monthly fee,Partner with us and receive half of all recurring user subscription revenue — no minimum investment required, transparent returns monthly, (Available after 6 Months) ",             ],
-            ].map(([title, desc]) => (
+                "Invest any amount and Earn up to 50% of monthly fee,Partner with us and receive half of all recurring user subscription revenue — no minimum investment required, transparent returns monthly, (Available after 6 Months) ",
+               ],
+               
+             ].map(([title, desc]) => (
               <div key={title} className="bg-white/5 p-6 rounded-xl">
                 <h3 className="text-xl font-bold text-emerald-400">{title}</h3>
                 <p className="text-slate-300 mt-3">{desc}</p>
@@ -497,6 +499,19 @@ useEffect(() => {
             <div className="max-w-md mx-auto">
               <Doughnut data={allocationData} />
             </div>
+            <div>
+          <h1>1.0 Revenue & Profit Sharing Model</h1>
+           <p>The $BCC ecosystem operates on a <b>Net Profit Share</b> model. This ensures the platform always has the capital to grow while rewarding our stakeholders with a significant 50% share of the remaining surplus.</p>
+
+          <h2>1.1 Monthly Fee Allocation</h2>
+          <p>Every dollar generated from user fees is split to ensure sustainability: 5% for Marketing, 5% for Platform Maintenance, and 5-10% for Team and ongoing incentives. This leaves a <b>Net Profit Pool of 80-85%</b>.</p>
+
+          <h2>1.2 The 50/50 Profit Split</h2>
+          <p>Once operational expenses are cleared, the Net Profit Pool is split exactly in half. 50% is reinvested into <b>Company Growth</b> to increase token value, and 50% is distributed directly to <b>Stakeholders</b> as a reward for their equity in the project.</p>
+
+           <h2>1.3 Compounded Profit Multiplier</h2>
+           <p>We strictly avoid interest-based mechanics. Instead, stakeholders can choose to reinvest their monthly profit share back into $BCC tokens. This triggers a <b>Compounded Profit</b> effect, increasing your ownership percentage and your share of future distributions based on real platform growth.</p>
+           </div>
             <div className="mt-8 text-center text-sm text-slate-400">
   Presale funds are managed transparently with manual verification.
   <br />
@@ -527,17 +542,23 @@ useEffect(() => {
               This document outlines the Vision for the Future,protocol design, governance framework, and economic model.
             </p>
           
-          <p className="text-slate-300">
-             1.0 Security & Technical Infrastructure
-             The $BCC ecosystem is built on the Solana Blockchain, prioritizing high-speed transactions, low costs, and institutional-grade security. 
-             Our commitment to investor safety is built into the core code of our smart contracts.
-              </p>
-              
-              <p className="text-slate-300">
-             1.1 Smart Contract Architecture
-             Our presale and profit-sharing protocols are developed using the Anchor Framework (Rust). 
-             This framework is the industry standard for Solana, providing a secure environment that prevents common vulnerabilities like re-entrancy attacks and unauthorized account access.
-               </p>
+            <div>
+            <h1>5.0 Security & Technical Infrastructure</h1>
+            <p>The $BCC ecosystem is built on the Solana Blockchain, prioritizing high-speed transactions, low costs, and institutional-grade security. Our commitment to investor safety is built into the core code of our smart contracts.</p>
+
+            <h2>5.1 Smart Contract Architecture</h2>
+            <p>Our presale and profit-sharing protocols are developed using the <b>Anchor Framework (Rust)</b>. This framework is the industry standard for Solana, providing a secure environment that prevents common vulnerabilities like re-entrancy attacks and unauthorized account access.</p>
+
+            <h2>5.2 Investor Protection: The 5-Year Lock</h2>
+            <p>To ensure long-term sustainability and prevent market manipulation, we have implemented a strict liquidity lock. 50% of the initial Liquidity Pool (LP) is locked via <b>Streamflow Finance</b> for a duration of 5–10 years. This lock is fully verifiable on-chain via Solscan and DEXScreener.</p>
+
+            <h2>5.3 Automated Token Vesting</h2>
+            <p>To protect the $BCC market value, all presale tokens are subject to a <b>Linear Vesting Schedule</b>. This ensures a gradual release of supply rather than a massive market influx at launch. 20% of purchased tokens are released every 30 days.</p>
+
+            <h2>5.4 Anti-Whale Protocol</h2>
+            <p>We have implemented strict purchase limits per wallet. The minimum purchase is set at <b>0.1 SOL</b> and the maximum at <b>50 SOL</b>. This ensures a decentralized distribution and prevents single entities from holding a dominant share of the circulating supply.</p>
+            </div>
+
             <h3 className="text-xl font-bold text-emerald-400">Roadmap</h3>
             <ul className="space-y-4 text-slate-300">
               <li><strong>Phase 1:</strong> Protocol launch and early adoption</li>
