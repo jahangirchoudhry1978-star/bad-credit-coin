@@ -573,10 +573,37 @@ useEffect(() => {
     </p>
   </div>
 
-  <div>
-    <h2 className="text-2xl font-semibold mb-3">5.2 Investor Protection: The 5-Year Lock</h2>
+<div>
+    <h1 className="text-3xl font-bold mb-4 text-green-500">5.0 Security & Technical Infrastructure</h1>
     <p className="mb-4 text-gray-300 leading-relaxed">
-      To ensure long-term sustainability and prevent market manipulation, we have implemented a strict liquidity lock. 50% of the initial Liquidity Pool (LP) is locked via <b>Streamflow Finance</b> for a duration of 5–10 years. This lock is fully verifiable on-chain via Solscan and DEXScreener.
+      The $BCC ecosystem is architected on the Solana Blockchain to leverage institutional-grade security and sub-second finality. Our infrastructure is designed to protect stakeholder equity through immutable smart contracts.
+    </p>
+  </div>
+
+  {/* Revised Section 5.2 */}
+  <div>
+    <h2 className="text-2xl font-semibold mb-3">5.2 Strategic Liquidity Allocation & Lock</h2>
+    <p className="mb-4 text-gray-300 leading-relaxed">
+      To ensure long-term market stability and protect against volatility, our Liquidity Pool (LP) is managed through a multi-tier security model:
+    </p>
+    
+    <ul className="list-disc list-inside space-y-4 text-gray-300 ml-2">
+      <li>
+        <strong className="text-white">Primary 5-Year Lock (50%):</strong> 
+        50% of the initial Liquidity Pool is secured via a time-locked smart contract (Streamflow Finance) for a minimum duration of 5 years. This prevents unauthorized withdrawals and ensures market depth.
+      </li>
+      <li>
+        <strong className="text-white">Lending Pool Liquidity (25%):</strong> 
+        25% of the total LP is designated for our <b>On-Demand Lending Pool</b>. This capital provides immediate liquidity for user loans, allowing the ecosystem to scale as member demand for credit facilities grows.
+      </li>
+      <li>
+        <strong className="text-white">Structured Annual Vesting (25%):</strong> 
+        The remaining 25% of the LP is subject to a strict <b>Long-Term Vesting Model</b>. These tokens are released at a rate of 5% annually, ensuring that liquidity depth grows in direct correlation with platform maturity.
+      </li>
+    </ul>
+    
+    <p className="mt-4 text-gray-400 italic text-sm">
+      *Note: All liquidity locks and vesting schedules are publicly verifiable on-chain via Solscan and DEXScreener to maintain 100% transparency.
     </p>
   </div>
 
