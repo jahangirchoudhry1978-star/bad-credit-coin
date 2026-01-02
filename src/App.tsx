@@ -344,7 +344,7 @@ useEffect(() => {
             <section className="space-y-6 max-w-5xl mx-auto">
               <h2 className="text-4xl font-bold text-emerald-400">Presale Smart Contract</h2>
               <p className="text-slate-300">
-             The $BCC presale smart contract is being prepared for thirs-party security auditing ahead of launch.
+             The $BCC presale smart contract is being prepared for third-party security auditing ahead of launch.
               </p>
             </section>
 
@@ -526,6 +526,11 @@ useEffect(() => {
               BCC aims to redefine Global lending by proving that credit does not need Interest to be profitable or Sustainable.
               This document outlines the Vision for the Future,protocol design, governance framework, and economic model.
             </p>
+            [
+                "5.0 Security & Technical Infrastructure",
+                "The $BCC ecosystem is built on the Solana Blockchain, prioritizing high-speed transactions, low costs, and institutional-grade security.
+                 Our commitment to investor safety is built into the core code of our smart contracts.",
+              ],
             <h3 className="text-xl font-bold text-emerald-400">Roadmap</h3>
             <ul className="space-y-4 text-slate-300">
               <li><strong>Phase 1:</strong> Protocol launch and early adoption</li>
