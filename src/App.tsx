@@ -559,24 +559,18 @@ useEffect(() => {
             </p>
           
            <div className="space-y-8 text-white p-6">
-  <div>
-    <h1 className="text-3xl font-bold mb-4 text-green-500">5.0 Security & Technical Infrastructure</h1>
-    <p className="mb-4 text-gray-300 leading-relaxed">
-      The $BCC ecosystem is built on the Solana Blockchain, prioritizing high-speed transactions, low costs, and institutional-grade security. Our commitment to investor safety is built into the core code of our smart contracts.
-    </p>
-  </div>
-
-  <div>
-    <h2 className="text-2xl font-semibold mb-3">5.1 Smart Contract Architecture</h2>
-    <p className="mb-4 text-gray-300 leading-relaxed">
-      Our presale and profit-sharing protocols are developed using the <b>Anchor Framework (Rust)</b>. This framework is the industry standard for Solana, providing a secure environment that prevents common vulnerabilities like re-entrancy attacks and unauthorized account access.
-    </p>
-  </div>
 
 <div>
     <h1 className="text-3xl font-bold mb-4 text-green-500">5.0 Security & Technical Infrastructure</h1>
     <p className="mb-4 text-gray-300 leading-relaxed">
       The $BCC ecosystem is architected on the Solana Blockchain to leverage institutional-grade security and sub-second finality. Our infrastructure is designed to protect stakeholder equity through immutable smart contracts.
+    </p>
+  </div>
+
+    <div>
+    <h2 className="text-2xl font-semibold mb-3">5.1 Smart Contract Architecture</h2>
+    <p className="mb-4 text-gray-300 leading-relaxed">
+      Our presale and profit-sharing protocols are developed using the <b>Anchor Framework (Rust)</b>. This framework is the industry standard for Solana, providing a secure environment that prevents common vulnerabilities like re-entrancy attacks and unauthorized account access.
     </p>
   </div>
 
