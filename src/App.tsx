@@ -526,11 +526,18 @@ useEffect(() => {
               BCC aims to redefine Global lending by proving that credit does not need Interest to be profitable or Sustainable.
               This document outlines the Vision for the Future,protocol design, governance framework, and economic model.
             </p>
-            [
-                "5.0 Security & Technical Infrastructure",
-                "The $BCC ecosystem is built on the Solana Blockchain, prioritizing high-speed transactions, low costs, and institutional-grade security.
-                 Our commitment to investor safety is built into the core code of our smart contracts.",
-              ],
+          
+          <p className="text-slate-300">
+             1.0 Security & Technical Infrastructure
+             The $BCC ecosystem is built on the Solana Blockchain, prioritizing high-speed transactions, low costs, and institutional-grade security. 
+             Our commitment to investor safety is built into the core code of our smart contracts.
+              </p>
+              
+              <p className="text-slate-300">
+             1.1 Smart Contract Architecture
+             Our presale and profit-sharing protocols are developed using the Anchor Framework (Rust). 
+             This framework is the industry standard for Solana, providing a secure environment that prevents common vulnerabilities like re-entrancy attacks and unauthorized account access.
+               </p>
             <h3 className="text-xl font-bold text-emerald-400">Roadmap</h3>
             <ul className="space-y-4 text-slate-300">
               <li><strong>Phase 1:</strong> Protocol launch and early adoption</li>
