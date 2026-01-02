@@ -543,19 +543,20 @@ useEffect(() => {
             </p>
           
             <div>
-            <h1>5.0 Security & Technical Infrastructure</h1>
+            <p className="text-slate-300"></p> 
+            <b>2.0 Security & Technical Infrastructure</b>
             <p>The $BCC ecosystem is built on the Solana Blockchain, prioritizing high-speed transactions, low costs, and institutional-grade security. Our commitment to investor safety is built into the core code of our smart contracts.</p>
-
-            <h2>5.1 Smart Contract Architecture</h2>
+ 
+            <b>2.1 Smart Contract Architecture</b>
             <p>Our presale and profit-sharing protocols are developed using the <b>Anchor Framework (Rust)</b>. This framework is the industry standard for Solana, providing a secure environment that prevents common vulnerabilities like re-entrancy attacks and unauthorized account access.</p>
 
-            <h2>5.2 Investor Protection: The 5-Year Lock</h2>
+            <b>2.2 Investor Protection: The 5-Year Lock</b>
             <p>To ensure long-term sustainability and prevent market manipulation, we have implemented a strict liquidity lock. 50% of the initial Liquidity Pool (LP) is locked via <b>Streamflow Finance</b> for a duration of 5–10 years. This lock is fully verifiable on-chain via Solscan and DEXScreener.</p>
 
-            <h2>5.3 Automated Token Vesting</h2>
+            <b>2.3 Automated Token Vesting</b>
             <p>To protect the $BCC market value, all presale tokens are subject to a <b>Linear Vesting Schedule</b>. This ensures a gradual release of supply rather than a massive market influx at launch. 20% of purchased tokens are released every 30 days.</p>
 
-            <h2>5.4 Anti-Whale Protocol</h2>
+            <b>2.4 Anti-Whale Protocol</b>
             <p>We have implemented strict purchase limits per wallet. The minimum purchase is set at <b>0.1 SOL</b> and the maximum at <b>50 SOL</b>. This ensures a decentralized distribution and prevents single entities from holding a dominant share of the circulating supply.</p>
             </div>
 
