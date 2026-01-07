@@ -49,7 +49,7 @@ export default function Presale() {
         </h1>
         {/* Price Increase Box */}
         <div className="bg-black/40 border border-white/10 rounded-xl p-4 text-center mb-6">
-          <p className="text-sm text-slate-300">Price will increase in</p>
+          <p className="text-sm text-slate-300">Next Price Increase</p>
           <p className="text-lg font-bold text-emerald-400 mt-1">
             Current: 0.0050 BCC &nbsp;→&nbsp; Next: 0.0055 BCC
           </p>
@@ -71,24 +71,10 @@ export default function Presale() {
         <p className="text-center text-cyan-400 font-semibold mb-10">
           Launch Date: April 1st, 2026
         </p>
-        {/* Caps */}
-        <div className="grid grid-cols-3 gap-4 mb-8 text-center">
-          <div className="bg-black/40 border border-white/10 rounded-lg p-3">
-            <p className="text-xs text-slate-400">Soft Cap</p>
-            <p className="font-bold">$500,000</p>
-          </div>
-          <div className="bg-black/40 border border-white/10 rounded-lg p-3">
-            <p className="text-xs text-slate-400">Hard Cap</p>
-            <p className="font-bold">$1,000,000</p>
-          </div>
-          <div className="bg-black/40 border border-white/10 rounded-lg p-3">
-            <p className="text-xs text-slate-400">Total Raised</p>
-            <p className="font-bold">$17,580 (manual)</p>
-          </div>
-        </div>
+
         {/* Payment Option 1 */}
         <div className="mb-8">
-          <h3 className="text-xl font-semibold">Solana Token</h3>
+          <h3 className="text-xl font-semibold">Solana</h3>
 
           <p className="text-gray-300 mb-3">
             Send Solana to the following address
@@ -145,7 +131,7 @@ export default function Presale() {
 
           <p className="text-gray-300 mt-4">
             Tokens will be distributed between{" "}
-            <strong>Feb 1st – Feb 3rd, 2026</strong>.
+            <strong>March 30– March 31st, 2026</strong>.
           </p>
 
           <p className="text-gray-300 mt-2">
