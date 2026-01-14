@@ -3,7 +3,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Doughnut } from "react-chartjs-2";
 import "chart.js/auto";
 import Presale from "./Presale";
-
+import PrivacyPolicy from "./PrivacyPolicy";
+import Terms from "./Terms";
+import HowToPurchase from "./HowToPurchase";
 
 // --------------------
 // MetaMask typing (TypeScript safe)
@@ -35,6 +37,9 @@ const [page, setPage] = useState<
   | "governance"
   | "apply"
   | "presale"
+  | "privacy"
+  | "terms"
+  | "howtopurchase"
 >("home");
 
  // --------------------
@@ -674,6 +679,9 @@ useEffect(() => {
     🔐 Smart Contract Audit Scheduled
   </span>
 </div>
+{page === "privacy" && <PrivacyPolicy />}
+{page === "terms" && <Terms />}
+{page === "howtopurchase" && <HowToPurchase />}
 
 {/* FOOTER */}
 <footer className="mt-32 border-t border-white/10 bg-black/90 dark:bg-black">
@@ -736,10 +744,17 @@ useEffect(() => {
     </div>
 
     {/* Copyright */}
-    <div className="text-sm text-gray-400 text-center tracking-wide">
-      © {new Date().getFullYear()} All rights reserved ·{" "}
-      <span className="text-gray-300">badcreditcoin.com</span>
-    </div>
+<div className="flex flex-col items-center gap-4 mt-8 text-sm text-slate-400">
+  <div className="flex gap-6">
+    <button onClick={() => setPage("privacy")}>Privacy Policy</button>
+    <button onClick={() => setPage("terms")}>Terms</button>
+    <button onClick={() => setPage("howtopurchase")}>How to Purchase</button>
+  </div>
+
+  <p>📍 Toronto, Ontario, Canada</p>
+  <p>© {new Date().getFullYear()} BadCreditCoin.com — All rights reserved</p>
+</div>
+
 
   </div>
 </footer>
