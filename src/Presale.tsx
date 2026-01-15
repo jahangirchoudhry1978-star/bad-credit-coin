@@ -101,31 +101,47 @@ export default function Presale() {
         </div>
 
         {/* Payment Option 2: Interac */}
-        <div className="mt-8">
-          <h2 className="text-xl font-bold text-emerald-400 mb-3">
-            2. Interac Email Money Transfer
-          </h2>
+<div className="mt-8">
+  <h2 className="text-xl font-bold text-emerald-400 mb-3">
+    2. Interac Email Money Transfer
+  </h2>
 
-          <p className="text-slate-300">Send payment to:</p>
-          <p className="mt-2 text-lg font-semibold text-white bg-black/40 p-3 rounded-lg border border-white/10">
-            📧 badcreditcoin@gmail.com
-          </p>
+  <p className="text-slate-300 mb-2">Send payment to:</p>
 
-          <p className="text-gray-300 mt-4 text-sm">
-            Tokens will be distributed between{" "}
-            <strong>March 30– March 31st, 2026</strong>.
-          </p>
+  {/* FIXED BOX FOR MOBILE */}
+  <div className="flex items-center justify-between gap-2 bg-black/40 p-3 rounded-lg border border-white/10 w-full overflow-hidden">
+    <p className="text-sm sm:text-lg font-semibold text-white truncate break-all">
+      badcreditcoin@gmail.com
+    </p>
+    <button
+      onClick={() => {
+        navigator.clipboard.writeText("badcreditcoin@gmail.com");
+        alert("Email copied to clipboard");
+      }}
+      className="p-2 bg-emerald-400/10 hover:bg-emerald-400/20 text-emerald-400 rounded-md transition-colors"
+      title="Copy Email"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+    </button>
+  </div>
 
-          <p className="text-gray-300 mt-2 text-sm">
-            Please email your receipt to{" "}
-            <strong>badcreditcoin@gmail.com</strong> to confirm your allocation.
-          </p>
+  <div className="space-y-3 mt-4">
+    <p className="text-gray-300 text-sm leading-relaxed">
+      Tokens will be distributed between{" "}
+      <strong className="text-white">March 30– March 31st, 2026</strong>.
+    </p>
 
-          <p className="text-emerald-400 mt-4 font-semibold text-sm">
-            Early investors will be prioritized to apply for zero-interest loans
-            upon launch.
-          </p>
-        </div>
+    <p className="text-gray-300 text-sm leading-relaxed">
+      Please email your receipt to{" "}
+      <strong className="text-white">badcreditcoin@gmail.com</strong> to confirm your allocation.
+    </p>
+
+    <p className="text-emerald-400 font-semibold text-sm italic">
+      Early investors will be prioritized to apply for zero-interest loans
+      upon launch.
+    </p>
+  </div>
+</div>
         
         {/* Security Section */}
         <div className="mt-10 p-6 rounded-xl bg-black/40 border border-white/10">
