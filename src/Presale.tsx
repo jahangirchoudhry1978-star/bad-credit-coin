@@ -4,7 +4,7 @@ import AddressBox from './components/AddressBox';
 
 export default function Presale() {
   const TOTAL_SUPPLY = 100000000;
-  const SOLD = 3750000; // update manually or later via backend
+  const SOLD = 4890000; // update manually or later via backend
   const remaining = TOTAL_SUPPLY - SOLD;
 
   const [timeLeft, setTimeLeft] = useState("");
