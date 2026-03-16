@@ -15,9 +15,8 @@ export default function Presale() {
     const interval = setInterval(() => {
       const now = Date.now();
       const diff = targetDate - now;
-
       if (diff <= 0) {
-        setTimeLeft("Presale Ended");
+      setTimeLeft("Presale Ended");
         clearInterval(interval);
         return;
       }
