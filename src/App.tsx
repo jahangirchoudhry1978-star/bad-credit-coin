@@ -85,7 +85,7 @@ useEffect(() => {
     labels: ["Public", "Liquidity Pool","Lending Pool", "Team", "Marketing", "Reserve"],
     datasets: [
       {
-        data: [25,30, 25, 7, 8, 5],
+        data: [25,30, 25, 8, 7, 5],
         backgroundColor: ["#34d399", "#a78bfa","#22d3ee", "#60a5fa", "#a78bfa", "#fbbf24"],
         borderWidth: 0,
       },
