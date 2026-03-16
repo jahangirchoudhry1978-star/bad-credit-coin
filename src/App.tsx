@@ -82,11 +82,11 @@ useEffect(() => {
   // Tokenomics Chart
   // --------------------
   const allocationData = {
-    labels: ["Public", "Liquidity Pool","Lending Pool", "Team", "Marketing", "Reserve"],
+    labels: ["Public Sale", "Liquidity Pool","Lending Pool", "Team & Advisors", "Marketing & Growth"],
     datasets: [
       {
-        data: [25,30, 25, 8, 7, 5],
-        backgroundColor: ["#34d399", "#a78bfa","#22d3ee", "#60a5fa", "#a78bfa", "#fbbf24"],
+        data: [25,30, 25, 10, 10,],
+        backgroundColor: ["#34d399", "#22d3ee", "#60a5fa", "#a78bfa", "#fbbf24"],
         borderWidth: 0,
       },
     ],
@@ -369,12 +369,11 @@ useEffect(() => {
                   Fixed supply with allocation focused on sustainable lending and long‑term protocol growth.
                 </p>
                 <ul className="space-y-2 text-slate-300">
-                  <li>• Public Distribution – 25%</li>
+                  <li>• Public Sale – 25%</li>
                   <li>• Liquidity Pool – 30%</li>
                   <li>• Lending Pool – 25%</li>
-                  <li>• Team – 8%</li>
-                  <li>• Marketing – 7%</li>
-                  <li>• Reserve – 5%</li>
+                  <li>• Team & Advisors – 10%</li>
+                  <li>• Marketing & Growth – 10%</li>
                 </ul>
               </div>
               <div className="max-w-sm mx-auto">
