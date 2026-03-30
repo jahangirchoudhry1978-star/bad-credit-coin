@@ -313,6 +313,15 @@ useEffect(() => {
     Buy $BCC
   </button>
 </div>
+  <div className="bg-black min-h-screen text-white">
+    {/* Your Navbar and Hero components are probably up here */}
+    
+    {/* 👇 PASTE YOUR NEW COMPONENTS HERE! */}
+    <JupiterSwap />
+    <EcosystemSecurity />
+    
+    {/* Your Footer is probably down here */}
+  </div>
       {/* HERO */}
             <section className="text-center space-y-6">
               <h1 className="text-6xl font-extrabold">
@@ -685,15 +694,7 @@ useEffect(() => {
 {page === "terms" && <Terms />}
 {page === "howtopurchase" && <HowToPurchase />}
 return (
-  <div className="bg-black min-h-screen text-white">
-    {/* Your Navbar and Hero components are probably up here */}
-    
-    {/* 👇 PASTE YOUR NEW COMPONENTS HERE! */}
-    <JupiterSwap />
-    <EcosystemSecurity />
-    
-    {/* Your Footer is probably down here */}
-  </div>
+
 );
 
 {/* FOOTER */}
