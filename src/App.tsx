@@ -313,15 +313,7 @@ useEffect(() => {
     Buy $BCC
   </button>
 </div>
-  <div className="bg-black min-h-screen text-white">
-    {/* Your Navbar and Hero components are probably up here */}
-    
-    {/* 👇 PASTE YOUR NEW COMPONENTS HERE! */}
-    <JupiterSwap />
-    <EcosystemSecurity />
-    
-    {/* Your Footer is probably down here */}
-  </div>
+
       {/* HERO */}
             <section className="text-center space-y-6">
               <h1 className="text-6xl font-extrabold">
@@ -693,10 +685,16 @@ useEffect(() => {
 {page === "privacy" && <PrivacyPolicy />}
 {page === "terms" && <Terms />}
 {page === "howtopurchase" && <HowToPurchase />}
-return (
 
-);
-
+  <div className="bg-black min-h-screen text-white">
+    {/* Your Navbar and Hero components are probably up here */}
+    
+    {/* 👇 PASTE YOUR NEW COMPONENTS HERE! */}
+    <JupiterSwap />
+    <EcosystemSecurity />
+    
+    {/* Your Footer is probably down here */}
+  </div>
 {/* FOOTER */}
 <footer className="mt-32 border-t border-white/10 bg-black/90 dark:bg-black">
   <div className="max-w-3xl mx-auto px-6 py-10 flex flex-col items-center gap-6">
