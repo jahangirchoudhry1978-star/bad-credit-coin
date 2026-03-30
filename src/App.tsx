@@ -6,6 +6,8 @@ import Presale from "./Presale";
 import PrivacyPolicy from "./PrivacyPolicy";
 import Terms from "./Terms";
 import HowToPurchase from "./HowToPurchase";
+import EcosystemSecurity from './components/EcosystemSecurity';
+import JupiterSwap from './components/JupiterSwap';
 
 // --------------------
 // MetaMask typing (TypeScript safe)
@@ -682,6 +684,17 @@ useEffect(() => {
 {page === "privacy" && <PrivacyPolicy />}
 {page === "terms" && <Terms />}
 {page === "howtopurchase" && <HowToPurchase />}
+return (
+  <div className="bg-black min-h-screen text-white">
+    {/* Your Navbar and Hero components are probably up here */}
+    
+    {/* 👇 PASTE YOUR NEW COMPONENTS HERE! */}
+    <JupiterSwap />
+    <EcosystemSecurity />
+    
+    {/* Your Footer is probably down here */}
+  </div>
+);
 
 {/* FOOTER */}
 <footer className="mt-32 border-t border-white/10 bg-black/90 dark:bg-black">
