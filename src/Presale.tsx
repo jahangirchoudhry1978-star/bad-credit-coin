@@ -3,14 +3,14 @@ import { useEffect, useState } from "react";
 import AddressBox from './components/AddressBox';
 
 export default function Presale() {
-  const TOTAL_SUPPLY = 100000000;
-  const SOLD = 4890000; // update manually or later via backend
+  const TOTAL_SUPPLY = 750000000;
+  const SOLD = 437500000; // update manually or later via backend
   const remaining = TOTAL_SUPPLY - SOLD;
 
   const [timeLeft, setTimeLeft] = useState("");
 
   useEffect(() => {
-    const targetDate = new Date("2026-03-31T23:59:59Z").getTime();
+    const targetDate = new Date("2026-04-06T23:59:59Z").getTime();
 
     const interval = setInterval(() => {
       const now = Date.now();
@@ -55,7 +55,7 @@ export default function Presale() {
 
         {/* Price */}
         <p className="text-2xl font-bold text-center mb-4">
-          20,000 BCC = $100
+          1,000,000 BCC = $100
         </p>
 
         <p className="text-center text-emerald-400 font-semibold">
@@ -67,7 +67,7 @@ export default function Presale() {
         </p>
 
         <p className="text-center text-cyan-400 font-semibold mb-10">
-          Launch Date: April 1st, 2026
+          Launch Date: April 07th, 2026
         </p>
 
         {/* Payment Option 1: Solana */}
