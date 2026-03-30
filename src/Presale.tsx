@@ -49,7 +49,7 @@ export default function Presale() {
         <div className="bg-black/40 border border-white/10 rounded-xl p-4 text-center mb-6">
           <p className="text-sm text-slate-300">Next Price Increase</p>
           <p className="text-lg font-bold text-emerald-400 mt-1">
-            Current: 0.0050 BCC &nbsp;→&nbsp; Next: 0.0055 BCC
+            Current: 0.000050 BCC &nbsp;→&nbsp; Next: 0.000068 BCC
           </p>
         </div>
 
@@ -59,7 +59,7 @@ export default function Presale() {
         </p>
 
         <p className="text-center text-emerald-400 font-semibold">
-          Presale Ends March 31st, 2026
+          Presale Ends April 6th, 2026
         </p>
 
         <p className="text-center text-cyan-400 font-semibold">
@@ -127,7 +127,7 @@ export default function Presale() {
   <div className="space-y-3 mt-4">
     <p className="text-gray-300 text-sm leading-relaxed">
       Tokens will be distributed between{" "}
-      <strong className="text-white">March 30– March 31st, 2026</strong>.
+      <strong className="text-white">April 5th– April 6th, 2026</strong>.
     </p>
 
     <p className="text-gray-300 text-sm leading-relaxed">
