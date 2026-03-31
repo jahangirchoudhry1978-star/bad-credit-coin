@@ -633,13 +633,13 @@ useEffect(() => {
               <li><strong>Phase 5:</strong> DAO governance activation</li>
               <li><strong>Phase 6:</strong> Global expansion</li>
             </ul>
-            <a
-              href="/Bad-Credit-Coin-Whitepaper.pdf"
-              download
-              className="inline-block px-6 py-3 rounded-lg bg-gradient-to-r from-emerald-400 to-cyan-400 text-black font-semibold"
-            >
-              Download PDF
-            </a>
+            <a 
+              href="/BCC-Whitepaper.pdf" 
+              download="BCC-Whitepaper.pdf"
+               className="inline-block bg-green-500 text-black font-bold py-3 px-6 rounded-xl hover:bg-green-400 transition-colors duration-200"
+              >
+              Download Whitepaper (PDF)
+              </a>
           </motion.section>
         )}
 
