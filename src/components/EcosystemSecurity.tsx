@@ -28,43 +28,109 @@ export default function EcosystemSecurity() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           
           {/* Card 1: Lending Pool */}
-          <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6 hover:border-green-500/50 transition-all duration-300">
-            <div className="text-green-400 text-sm font-bold uppercase mb-2">Lending Pool</div>
-            <div className="text-2xl font-bold mb-1">750,000,000</div>
-            <div className="text-gray-500 text-sm mb-4">Tokens Locked</div>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              100% locked for 6 months. This supply is strictly reserved to fund our interest-free private lending platform.
-            </p>
+          <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6 hover:border-green-500/50 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div className="text-green-400 text-sm font-bold uppercase mb-2">Lending Pool</div>
+              <div className="text-2xl font-bold mb-1">750,000,000</div>
+              <div className="text-gray-500 text-sm mb-4">Tokens Locked</div>
+              <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                100% locked for 6 months. This supply is strictly reserved to fund our interest-free private lending platform.
+              </p>
+            </div>
+            
+            {/* Verification Buttons */}
+            <div className="mt-auto space-y-3">
+              <a 
+                href="https://app.streamflow.finance/contract/solana/mainnet/6z8WFroZrjyjZsy3pGN7LhHuNBfgpjY1fc5k5MxQ4pYz?new=" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center bg-green-500 text-black font-bold py-2 px-4 rounded-lg hover:bg-green-400 transition-colors duration-200 text-xs"
+              >
+                <span>Verify on Streamflow</span>
+              </a>
+              <a 
+                href="https://solscan.io/tx/6z8WFroZrjyjZsy3pGN7LhHuNBfgpjY1fc5k5MxQ4pYz" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-full inline-block text-center text-xs text-gray-500 hover:text-green-400 transition-colors duration-200"
+              >
+                View Contract on Solscan
+              </a>
+            </div>
           </div>
 
           {/* Card 2: Marketing */}
-          <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6 hover:border-green-500/50 transition-all duration-300">
-            <div className="text-green-400 text-sm font-bold uppercase mb-2">Marketing</div>
-            <div className="text-2xl font-bold mb-1">450,000,000</div>
-            <div className="text-gray-500 text-sm mb-4">Tokens Locked</div>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              Subject to a 20-month linear vesting schedule. Only 5% unlocks each month to fund continuous advertising.
-            </p>
+          <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6 hover:border-green-500/50 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div className="text-green-400 text-sm font-bold uppercase mb-2">Marketing</div>
+              <div className="text-2xl font-bold mb-1">450,000,000</div>
+              <div className="text-gray-500 text-sm mb-4">Tokens Locked</div>
+              <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                Subject to a 20-month linear vesting schedule. Only 5% unlocks each month to fund continuous advertising.
+              </p>
+            </div>
+
+            {/* Verification Buttons */}
+            <div className="mt-auto space-y-3">
+              <a 
+                href="https://app.streamflow.finance/contract/solana/mainnet/8TQkyk9UVtw5kq5sPWHHQvToWU5zUyQbBiYjjqexdpT6?new" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center bg-green-500 text-black font-bold py-2 px-4 rounded-lg hover:bg-green-400 transition-colors duration-200 text-xs"
+              >
+                <span>Verify on Streamflow</span>
+              </a>
+              <a 
+                href="https://solscan.io/tx/8TQkyk9UVtw5kq5sPWHHQvToWU5zUyQbBiYjjqexdpT6" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-full inline-block text-center text-xs text-gray-500 hover:text-green-400 transition-colors duration-200"
+              >
+                View Contract on Solscan
+              </a>
+            </div>
           </div>
 
           {/* Card 3: Team */}
-          <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6 hover:border-green-500/50 transition-all duration-300">
-            <div className="text-green-400 text-sm font-bold uppercase mb-2">Team & Dev</div>
-            <div className="text-2xl font-bold mb-1">300,000,000</div>
-            <div className="text-gray-500 text-sm mb-4">Tokens Locked</div>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              Subject to a strict 20-month linear vesting schedule (5% monthly unlock). Our team is dedicated for the long haul.
-            </p>
+          <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6 hover:border-green-500/50 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div className="text-green-400 text-sm font-bold uppercase mb-2">Team & Dev</div>
+              <div className="text-2xl font-bold mb-1">300,000,000</div>
+              <div className="text-gray-500 text-sm mb-4">Tokens Locked</div>
+              <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                Subject to a strict 20-month linear vesting schedule (5% monthly unlock). Our team is dedicated for the long haul.
+              </p>
+            </div>
+
+            {/* Verification Buttons */}
+            <div className="mt-auto space-y-3">
+              <a 
+                href="https://app.streamflow.finance/contract/solana/mainnet/7daSSeqMbx446xiqtJbq4wgbbyusJXTAbPAxYWSGXpvj?new" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center bg-green-500 text-black font-bold py-2 px-4 rounded-lg hover:bg-green-400 transition-colors duration-200 text-xs"
+              >
+                <span>Verify on Streamflow</span>
+              </a>
+              <a 
+                href="https://solscan.io/tx/7daSSeqMbx446xiqtJbq4wgbbyusJXTAbPAxYWSGXpvj" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-full inline-block text-center text-xs text-gray-500 hover:text-green-400 transition-colors duration-200"
+              >
+                View Contract on Solscan
+              </a>
+            </div>
           </div>
         </div>
 
         {/* Dynamic Verification Section */}
         <div className="bg-gradient-to-br from-neutral-900 to-black border border-green-500/20 rounded-2xl p-6 text-center">
           <h3 className="text-xl font-bold mb-2 flex items-center justify-center gap-2">
-            🛡️ Verify On-Chain Transparency
+            🛡️ Contract Information
           </h3>
           <p className="text-gray-400 text-sm mb-4 max-w-xl mx-auto">
-            Once our locks are officially initiated on Streamflow on April 7th, direct clickable verification links will be updated here.
+            You can interact directly with the Bad Credit Coin contract. Use the address below to add BCC to your wallet.
           </p>
           
           {/* Custom Copy Box */}
