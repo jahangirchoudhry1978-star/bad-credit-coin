@@ -22,6 +22,22 @@ export default function EcosystemSecurity() {
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             To ensure the long-term growth of the BCC ecosystem and protect our community, 50% of the total supply is locked and secured.
           </p>
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            📢 BAD CREDIT COIN (BCC) TOKENOMICS UPDATE: THE PATH TO 1% FOREVER! 📢
+
+Hey BCC Family! 🚀
+
+You might have noticed a standard message on Jupiter stating that our 3% transfer fee is "mutable" and can be updated by the owner. We want to be 100% transparent with you about what this means and our ultimate master plan for the BCC ecosystem! 💎
+
+To protect our community and ensure a massive launch, we are keeping the authority open for ONE REASON ONLY: To lower your taxes as we grow! 📉
+
+Here is our official, hard-coded promise to you:
+
+🛑 The Tax Will NEVER Increase Above 3%. 💰 At $5 Million Market Cap ➡️ We will drop the tax by 1% (Leaving it at 2%).
+🔥 At $10 Million Market Cap ➡️ We will drop the tax by another 1% (Leaving it at 1% FOREVER).
+
+🔒 THE ULTIMATE LOCK: Once we achieve our $10 Million Market Cap goal and drop the tax to 1%, we will officially REVOKE the tax authority and make it completely IMMUTABLE on the Solana blockchain. No human being will ever be able to change it again!
+          </p>
         </div>
 
         {/* Big Cards Grid */}
