@@ -754,18 +754,6 @@ useEffect(() => {
       </a>
 
     </div>
-
-    {/* Copyright */}
-<div className="flex flex-col items-center gap-4 mt-8 text-sm text-slate-400">
-  <div className="flex gap-6">
-    <button onClick={() => setPage("privacy")}>Privacy Policy</button>
-    <button onClick={() => setPage("terms")}>Terms</button>
-    <button onClick={() => setPage("howtopurchase")}>How to Purchase</button>
-  </div>
-
-  <p>📍 Toronto, Ontario, Canada</p>
-  <p>© {new Date().getFullYear()} BadCreditCoin.com — All rights reserved</p>
-</div>
 {/* 🚀 ADDED LIVE CHARTS SECTION */}
 <div className="flex flex-col space-y-4">
   <h3 className="text-sm font-bold uppercase text-green-500 tracking-wider">
@@ -809,6 +797,18 @@ useEffect(() => {
     <span>GeckoTerminal</span>
   </a>
 </div>
+    {/* Copyright */}
+<div className="flex flex-col items-center gap-4 mt-8 text-sm text-slate-400">
+  <div className="flex gap-6">
+    <button onClick={() => setPage("privacy")}>Privacy Policy</button>
+    <button onClick={() => setPage("terms")}>Terms</button>
+    <button onClick={() => setPage("howtopurchase")}>How to Purchase</button>
+  </div>
+
+  <p>📍 Toronto, Ontario, Canada</p>
+  <p>© {new Date().getFullYear()} BadCreditCoin.com — All rights reserved</p>
+</div>
+
 
   </div>
 </footer>
