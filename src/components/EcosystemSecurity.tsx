@@ -22,22 +22,6 @@ export default function EcosystemSecurity() {
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             To ensure the long-term growth of the BCC ecosystem and protect our community, 50% of the total supply is locked and secured.
           </p>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            📢 BAD CREDIT COIN (BCC) TOKENOMICS UPDATE: THE PATH TO 1% FOREVER! 📢
-
-Hey BCC Family! 🚀
-
-You might have noticed a standard message on Jupiter stating that our 3% transfer fee is "mutable" and can be updated by the owner. We want to be 100% transparent with you about what this means and our ultimate master plan for the BCC ecosystem! 💎
-
-To protect our community and ensure a massive launch, we are keeping the authority open for ONE REASON ONLY: To lower your taxes as we grow! 📉
-
-Here is our official, hard-coded promise to you:
-
-🛑 The Tax Will NEVER Increase Above 3%. 💰 At $5 Million Market Cap ➡️ We will drop the tax by 1% (Leaving it at 2%).
-🔥 At $10 Million Market Cap ➡️ We will drop the tax by another 1% (Leaving it at 1% FOREVER).
-
-🔒 THE ULTIMATE LOCK: Once we achieve our $10 Million Market Cap goal and drop the tax to 1%, we will officially REVOKE the tax authority and make it completely IMMUTABLE on the Solana blockchain. No human being will ever be able to change it again!
-          </p>
         </div>
 
         {/* Big Cards Grid */}
@@ -140,8 +124,52 @@ Here is our official, hard-coded promise to you:
           </div>
         </div>
 
+
+        {/* 🚀 NEW: TOKENOMICS UPDATE & ROADMAP CARD */}
+        <div className="bg-neutral-900 border border-green-500/20 rounded-2xl p-8 mb-12 hover:border-green-500/40 transition-all duration-300">
+          <div className="flex items-center gap-3 mb-4">
+            <span className="text-2xl">📢</span>
+            <h3 className="text-xl font-bold text-white">Tokenomics Update: The Path to 1% Forever</h3>
+          </div>
+          
+          <p className="text-gray-400 text-sm leading-relaxed mb-6">
+            You might have noticed a standard message on Jupiter stating that our 3% transfer fee is &quot;mutable&quot; and can be updated by the owner. We want to be 100% transparent with you about what this means and our ultimate master plan for the BCC ecosystem! To protect our community and ensure a massive launch, we are keeping the authority open for one reason only: <span className="text-green-400 font-semibold">To lower your taxes as we grow!</span>
+          </p>
+
+          {/* Visual Step-by-Step Roadmap */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            
+            <div className="bg-neutral-800/50 p-4 rounded-xl border border-neutral-800">
+              <div className="text-red-500 font-bold text-lg mb-1">🛑 Never Above 3%</div>
+              <p className="text-gray-500 text-xs">The current tax is hard-capped and will never be raised.</p>
+            </div>
+
+            <div className="bg-neutral-800/50 p-4 rounded-xl border border-neutral-800">
+              <div className="text-green-400 font-bold text-lg mb-1">💰 At $5M MCap</div>
+              <p className="text-gray-500 text-xs">Tax drops by 1% (Leaving it at a low 2% tax rate).</p>
+            </div>
+
+            <div className="bg-neutral-800/50 p-4 rounded-xl border border-neutral-800">
+              <div className="text-green-400 font-bold text-lg mb-1">🔥 At $10M MCap</div>
+              <p className="text-gray-500 text-xs">Tax drops to 1% forever and authority will be revoked.</p>
+            </div>
+
+          </div>
+
+          <div className="bg-green-500/10 border border-green-500/20 rounded-xl p-4 flex items-start gap-3">
+            <span className="text-xl">🔒</span>
+            <div>
+              <h4 className="text-green-400 font-bold text-sm mb-1">The Ultimate Lock Promise</h4>
+              <p className="text-gray-300 text-xs leading-relaxed">
+                Once we achieve our $10 Million Market Cap goal and drop the tax to 1%, we will officially **REVOKE** the tax authority and make it completely **IMMUTABLE** on the Solana blockchain. No human being will ever be able to change it again! We are here for the long haul to build the ultimate interest-free lending platform. Let&apos;s send BCC to the moon together!
+              </p>
+            </div>
+          </div>
+        </div>
+
+
         {/* Dynamic Verification Section */}
-        <div className="bg-gradient-to-br from-neutral-900 to-black border border-green-500/20 rounded-2xl p-6 text-center">
+        <div className="bg-gradient-to-br from-neutral-900 to-black border border-neutral-800 rounded-2xl p-6 text-center">
           <h3 className="text-xl font-bold mb-2 flex items-center justify-center gap-2">
             🛡️ Contract Information
           </h3>
