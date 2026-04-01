@@ -766,7 +766,49 @@ useEffect(() => {
   <p>📍 Toronto, Ontario, Canada</p>
   <p>© {new Date().getFullYear()} BadCreditCoin.com — All rights reserved</p>
 </div>
+{/* 🚀 ADDED LIVE CHARTS SECTION */}
+<div className="flex flex-col space-y-4">
+  <h3 className="text-sm font-bold uppercase text-green-500 tracking-wider">
+    Trade & Live Charts
+  </h3>
 
+  <a 
+    href="https://dexscreener.com/solana/HDaPAGVzD9kBEB4iTrNewuk9wrz58J8fXMs9Q3U31u5N" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="text-gray-400 hover:text-white flex items-center gap-2 transition-colors duration-200 text-sm"
+  >
+    <svg className="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a4 4 0 01-4 4H8a4 4 0 01-4-4V4z" />
+    </svg>
+    <span>DexScreener (Live Charts)</span>
+  </a>
+
+  <a 
+    href="https://birdeye.so/token/HDaPAGVzD9kBEB4iTrNewuk9wrz58J8fXMs9Q3U31u5N?chain=solana" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="text-gray-400 hover:text-white flex items-center gap-2 transition-colors duration-200 text-sm"
+  >
+    <svg className="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+    </svg>
+    <span>Birdeye Terminal</span>
+  </a>
+
+  <a 
+    href="https://www.geckoterminal.com/solana/tokens/HDaPAGVzD9kBEB4iTrNewuk9wrz58J8fXMs9Q3U31u5N" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="text-gray-400 hover:text-white flex items-center gap-2 transition-colors duration-200 text-sm"
+  >
+    <svg className="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+    </svg>
+    <span>GeckoTerminal</span>
+  </a>
+</div>
 
   </div>
 </footer>
