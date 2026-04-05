@@ -591,16 +591,16 @@ useEffect(() => {
     
     <ul className="list-disc list-inside space-y-4 text-gray-300 ml-2">
       <li>
-        <strong className="text-white">Primary 5-Year Lock (50%):</strong> 
-        50% of the initial Liquidity Pool is secured via a time-locked smart contract (Streamflow Finance) for a minimum duration of 5 years. This prevents unauthorized withdrawals and ensures market depth.
+        <strong className="text-white">Primary 3-Year Lock (50%):</strong> 
+        100% of the initial Liquidity Pool is secured via a time-locked smart contract (Streamflow Finance) for a minimum duration of 3 years. This prevents unauthorized withdrawals and ensures market depth.
       </li>
       <li>
-        <strong className="text-white">Lending Pool Liquidity (25%):</strong> 
-        25% of the total LP is designated for our <b>On-Demand Lending Pool</b>. This capital provides immediate liquidity for user loans, allowing the ecosystem to scale as member demand for credit facilities grows.
+        <strong className="text-white">Lending Pool (25%):</strong> 
+        100% of the Lending pool is designated for our <b>On-Demand Lending </b>. This capital will provide liquidity for user loans, allowing the ecosystem to scale as member demand for credit facilities grows. Launch after 6 Month
       </li>
       <li>
-        <strong className="text-white">Structured Annual Vesting (25%):</strong> 
-        The remaining 25% of the LP is subject to a strict <b>Long-Term Vesting Model</b>. These tokens are released at a rate of 5% annually, ensuring that liquidity depth grows in direct correlation with platform maturity.
+        <strong className="text-white">Structured Monthly Vesting (25%):</strong> 
+        The remaining 25% of the Supply is subject to a strict <b>Long-Term 20 Month Vesting Model</b>. These tokens are released at a rate of 5% Monthly, ensuring that liquidity depth grows in direct correlation with platform maturity.
       </li>
     </ul>
     
@@ -612,7 +612,7 @@ useEffect(() => {
   <div>
     <h2 className="text-2xl font-semibold mb-3">5.3 Automated Token Vesting</h2>
     <p className="mb-4 text-gray-300 leading-relaxed">
-      To protect the $BCC market value, all presale tokens are subject to a <b>Linear Vesting Schedule</b>. This ensures a gradual release of supply rather than a massive market influx at launch. <b>20% of purchased tokens are released every 30 days.</b>
+      To protect the $BCC market value, all presale tokens are subject to a <b>Linear Vesting Schedule</b>. This ensures a gradual release of supply rather than a massive market influx at launch. <b>25% of purchased tokens are released and 25% every 30 days afterward.</b>
     </p>
   </div>
 
