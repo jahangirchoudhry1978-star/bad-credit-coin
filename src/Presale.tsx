@@ -4,7 +4,7 @@ import AddressBox from './components/AddressBox';
 
 export default function Presale() {
   const TOTAL_SUPPLY = 750000000;
-  const SOLD = 437500000; // update manually or later via backend
+  const SOLD = 625000000; // update manually or later via backend
   const remaining = TOTAL_SUPPLY - SOLD;
 
   const [timeLeft, setTimeLeft] = useState("");
@@ -42,24 +42,24 @@ export default function Presale() {
       >
         {/* Heading */}
         <h1 className="text-4xl font-extrabold text-center bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent mb-6">
-          Token Presale
+          Token Presale has Ended
         </h1>
 
         {/* Price Increase Box */}
         <div className="bg-black/40 border border-white/10 rounded-xl p-4 text-center mb-6">
           <p className="text-sm text-slate-300">Next Price Increase</p>
           <p className="text-lg font-bold text-emerald-400 mt-1">
-            Current: 0.000050 BCC &nbsp;→&nbsp; Next: 0.000068 BCC
+            Launch Price: 0.000060 BCC &nbsp;→&nbsp; Next Target: 0.00033 BCC
           </p>
         </div>
 
         {/* Price */}
         <p className="text-2xl font-bold text-center mb-4">
-          1,000,000 BCC = $100
+          303,030 BCC = $100
         </p>
 
         <p className="text-center text-emerald-400 font-semibold">
-          Presale Ends April 6th, 2026
+          Presale Ended April 5th , 2026
         </p>
 
         <p className="text-center text-cyan-400 font-semibold">
@@ -74,7 +74,7 @@ export default function Presale() {
         <div className="mb-8 flex flex-col items-center">
           <h3 className="text-xl font-semibold mb-2 self-start">1. Solana</h3>
           <p className="text-gray-300 mb-4 self-start">
-            Send Solana to the following address:
+            Official Mint Address:
           </p>
 
           {/* Corrected: Using your AddressBox Component here */}
@@ -126,7 +126,7 @@ export default function Presale() {
 
   <div className="space-y-3 mt-4">
     <p className="text-gray-300 text-sm leading-relaxed">
-      Tokens will be distributed between{" "}
+      Tokens are being distributed from{" "}
       <strong className="text-white">April 5th– April 6th, 2026</strong>.
     </p>
 
