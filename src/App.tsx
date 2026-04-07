@@ -8,7 +8,7 @@ import Terms from "./Terms";
 import HowToPurchase from "./HowToPurchase";
 import EcosystemSecurity from './components/EcosystemSecurity';
 import JupiterSwap from './components/JupiterSwap';
-
+// If you have other imports like './App.css', keep them here.
 // --------------------
 // MetaMask typing (TypeScript safe)
 // --------------------
@@ -23,7 +23,31 @@ declare global {
   }
 }
 
-
+const TokenStatus = () => {
+  return (
+    <section className="w-full px-4 py-16 bg-[#0a0a0a]">
+      <div className="max-w-4xl mx-auto p-[1px] rounded-3xl bg-gradient-to-br from-green-500 via-white/10 to-black shadow-xl">
+        <div className="bg-[#0f0f0f]/95 backdrop-blur-xl rounded-[23px] p-8 md:p-12 border border-white/5 text-center">
+          <h2 className="text-3xl md:text-5xl font-black mb-8 bg-gradient-to-r from-green-400 to-white bg-clip-text text-transparent">
+            TRUST & TRANSPARENCY
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-green-500/50 transition-all">
+              <h3 className="text-green-500 font-bold uppercase text-xs mb-2">Liquidity</h3>
+              <p className="text-2xl font-bold text-white mb-4">100% LOCKED</p>
+              <a href="STREAMFLOW_LINK_HERE" target="_blank" className="block w-full py-3 rounded-xl bg-green-600 text-black font-bold uppercase text-sm">View Proof</a>
+            </div>
+            <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
+              <h3 className="text-gray-500 font-bold uppercase text-xs mb-2">Contract</h3>
+              <p className="text-[10px] font-mono text-green-200/60 mb-4 break-all">HDaPAGVzD9kBEB4iTrNewuk9wrz58J8fXMs9Q3U31u5N</p>
+              <button onClick={() => navigator.clipboard.writeText('HDaPAGVzD9kBEB4iTrNewuk9wrz58J8fXMs9Q3U31u5N')} className="w-full py-3 rounded-xl border border-white/10 text-white text-sm font-bold">Copy Address</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 // Main App
 // --------------------
 export default function App() {
@@ -337,7 +361,7 @@ useEffect(() => {
                 </button>
               </div>
             </section>
-
+             <TokenStatus />
             {/* WHO WE ARE */}
             <section className="space-y-6 max-w-5xl mx-auto">
               <h2 className="text-4xl font-bold text-emerald-400">Who We Are</h2>
@@ -364,6 +388,7 @@ useEffect(() => {
              This partnership bridges the gap between capital and consistent, scalable monthly dividends.
               </p>
             </section>
+            
             {/* TOKENOMICS SUMMARY */}
             <section className="grid md:grid-cols-2 gap-12 items-center">
               <div>
