@@ -35,7 +35,7 @@ const TokenStatus = () => {
             <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-green-500/50 transition-all">
               <h3 className="text-green-500 font-bold uppercase text-xs mb-2">Liquidity</h3>
               <p className="text-2xl font-bold text-white mb-4">100% LOCKED</p>
-              <a href="STREAMFLOW_LINK_HERE" target="_blank" className="block w-full py-3 rounded-xl bg-green-600 text-black font-bold uppercase text-sm">View Proof</a>
+              <a href="https://app.streamflow.finance/contract/solana/mainnet/2iVGvR8MFcqGHaYVfosyS8ni8L1YnGsE6sjUAWZUqu8H?new" target="_blank" className="block w-full py-3 rounded-xl bg-green-600 text-black font-bold uppercase text-sm">View Proof</a>
             </div>
             <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
               <h3 className="text-gray-500 font-bold uppercase text-xs mb-2">Contract</h3>
