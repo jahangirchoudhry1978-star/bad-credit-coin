@@ -7,7 +7,6 @@ const Presale = () => {
   
   useEffect(() => {
     const initJupiter = () => {
-      // Check if the script exists and window.Jupiter is available
       if (window.Jupiter) {
         window.Jupiter.init({
           displayMode: "integrated",
@@ -18,11 +17,15 @@ const Presale = () => {
             fixedOutputMint: true,
             initialOutputMint: BCC_MINT,
           },
+          // This ensures the terminal doesn't grow too large on mobile
+          containerClassName: "max-h-[600px] md:max-h-[700px]", 
+          containerStyles: {
+            width: '100%',
+          }
         });
       }
     };
 
-    // Retry logic in case the script tag in index.html hasn't finished loading
     const interval = setInterval(() => {
       if (window.Jupiter) {
         initJupiter();
@@ -34,26 +37,25 @@ const Presale = () => {
   }, []);
 
   return (
-    <div className="w-full min-h-screen text-white bg-black">
+    <div className="w-full min-h-screen text-white bg-black px-4 md:px-0">
       {/* Header Info */}
-      <div className="text-center mb-10 space-y-4">
-        <h1 className="text-4xl md:text-6xl font-black bg-gradient-to-r from-green-400 to-white bg-clip-text text-transparent uppercase tracking-tighter">
+      <div className="text-center mb-6 md:mb-10 space-y-4 pt-6">
+        <h1 className="text-3xl md:text-6xl font-black bg-gradient-to-r from-green-400 to-white bg-clip-text text-transparent uppercase tracking-tighter">
           Trade $BCC Live
         </h1>
-        <p className="text-gray-400 max-w-2xl mx-auto">
-          Swap SOL or USDC for $BCC instantly via the Jupiter aggregator. 
-          Liquidity is locked and verified.
+        <p className="text-xs md:text-base text-gray-400 max-w-2xl mx-auto px-2">
+          Swap SOL or USDC for $BCC instantly. Liquidity is locked and verified.
         </p>
       </div>
 
       {/* Main Trading Floor */}
-      <div className="grid lg:grid-cols-12 gap-6 items-start">
+      <div className="flex flex-col lg:grid lg:grid-cols-12 gap-6 items-start">
         
-        {/* LEFT: DexScreener Live Chart */}
+        {/* TOP/LEFT: DexScreener Live Chart */}
         <motion.div 
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          className="lg:col-span-7 w-full h-[600px] rounded-3xl overflow-hidden border border-white/10 bg-[#131722] shadow-2xl"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="w-full lg:col-span-7 h-[350px] md:h-[500px] lg:h-[600px] rounded-2xl md:rounded-3xl overflow-hidden border border-white/10 bg-[#131722] shadow-2xl order-1"
         >
           <iframe 
             width="100%" 
@@ -64,42 +66,42 @@ const Presale = () => {
           ></iframe>
         </motion.div>
 
-        {/* RIGHT: Jupiter Terminal */}
+        {/* BOTTOM/RIGHT: Jupiter Terminal */}
         <motion.div 
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          className="lg:col-span-5 w-full flex flex-col gap-4"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="w-full lg:col-span-5 flex flex-col gap-4 order-2"
         >
-          <div className="p-6 rounded-3xl bg-[#0f0f0f] border border-white/10 shadow-xl min-h-[600px] flex flex-col">
-            <div className="flex justify-between items-center mb-6">
-              <span className="text-xs font-bold text-green-500 uppercase tracking-widest">Live Swap</span>
-              <div className="flex gap-2">
+          <div className="p-4 md:p-6 rounded-2xl md:rounded-3xl bg-[#0f0f0f] border border-white/10 shadow-xl flex flex-col min-h-[500px]">
+            <div className="flex justify-between items-center mb-4 md:mb-6">
+              <span className="text-[10px] md:text-xs font-bold text-green-500 uppercase tracking-widest">Live Swap</span>
+              <div className="flex gap-2 items-center">
                 <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
-                <span className="text-[10px] text-gray-400 uppercase font-bold">Mainnet Beta</span>
+                <span className="text-[9px] md:text-[10px] text-gray-400 uppercase font-bold">Mainnet Beta</span>
               </div>
             </div>
 
             {/* Terminal Container */}
             <div id="jupiter-terminal" className="flex-grow w-full rounded-xl overflow-hidden"></div>
             
-            <p className="text-[10px] text-gray-500 mt-4 text-center italic">
-              Official Mint: {BCC_MINT}
+            <p className="text-[9px] md:text-[10px] text-gray-500 mt-4 text-center italic break-all">
+              Mint: {BCC_MINT}
             </p>
           </div>
         </motion.div>
       </div>
 
       {/* Stats Badges */}
-      <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="mt-8 md:mt-12 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 pb-10">
         {[
           { label: "Liquidity", val: "500 SOL LOCKED" },
-          { label: "Tax", val: "0% BUY / 0% SELL" },
+          { label: "Tax", val: "0% BUY / SELL" },
           { label: "Network", val: "SOLANA" },
           { label: "Slippage", val: "AUTO" }
         ].map((item, i) => (
-          <div key={i} className="p-4 rounded-2xl bg-white/5 border border-white/5 text-center">
-            <p className="text-[10px] text-gray-500 uppercase font-bold">{item.label}</p>
-            <p className="text-sm font-bold text-white">{item.val}</p>
+          <div key={i} className="p-3 md:p-4 rounded-xl md:rounded-2xl bg-white/5 border border-white/5 text-center">
+            <p className="text-[9px] text-gray-500 uppercase font-bold">{item.label}</p>
+            <p className="text-xs md:text-sm font-bold text-white">{item.val}</p>
           </div>
         ))}
       </div>
