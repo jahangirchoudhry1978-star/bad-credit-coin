@@ -7,7 +7,6 @@ import PrivacyPolicy from "./PrivacyPolicy";
 import Terms from "./Terms";
 import HowToPurchase from "./HowToPurchase";
 import EcosystemSecurity from './components/EcosystemSecurity';
-import JupiterSwap from './components/JupiterSwap';
 // If you have other imports like './App.css', keep them here.
 // --------------------
 // MetaMask typing (TypeScript safe)
@@ -20,6 +19,11 @@ declare global {
       on?: (event: string, callback: (...args: any[]) => void) => void;
       removeListener?: (event: string, callback: (...args: any[]) => void) => void;
     };
+  }
+}
+declare global {
+  interface Window {
+    Jupiter: any;
   }
 }
 
@@ -715,7 +719,7 @@ useEffect(() => {
     {/* Your Navbar and Hero components are probably up here */}
     
     {/* 👇 PASTE YOUR NEW COMPONENTS HERE! */}
-    <JupiterSwap />
+  
     <EcosystemSecurity />
     
     {/* Your Footer is probably down here */}
