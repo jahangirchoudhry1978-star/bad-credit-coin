@@ -56,7 +56,7 @@ const AirdropForm = () => {
       <div className="w-full bg-[#121212] border-2 border-green-500 p-6 rounded-2xl text-center mb-8 shadow-[0_0_20px_rgba(34,197,94,0.2)]">
         <h2 className="text-green-500 text-2xl font-bold mb-2">Verification Sent!</h2>
         <p className="text-gray-300 text-sm">
-          Your 25% bonus will be airdropped within 24 hours of the event closing on April 23rd.
+          Your 5% bonus will be airdropped within 24 hours of the event closing on May 23rd.
         </p>
       </div>
     );
@@ -71,7 +71,7 @@ const AirdropForm = () => {
         </div>
         <div className="text-center md:text-right">
           <p className="text-gray-400 text-[10px] uppercase font-bold">Buy 10,000+ $BCC</p>
-          <p className="text-white font-black text-lg text-green-400">+25% FREE TOKENS</p>
+          <p className="text-white font-black text-lg text-green-400">+5% FREE TOKENS</p>
         </div>
       </div>
       
@@ -102,7 +102,7 @@ const AirdropForm = () => {
           disabled={loading}
           className="bg-green-500 text-black font-black py-3 rounded-xl hover:bg-green-400 transition-all uppercase text-xs tracking-tighter"
         >
-          {loading ? 'Processing...' : 'Claim 25% Bonus'}
+          {loading ? 'Processing...' : 'Claim 5% Bonus'}
         </button>
       </form>
     </div>
