@@ -67,7 +67,7 @@ const AirdropForm = () => {
       <div className="flex flex-col md:flex-row justify-between items-center mb-6 gap-4">
         <div>
           <h2 className="text-white text-xl md:text-2xl font-black uppercase italic">Phase 1 Airdrop Bonus</h2>
-          <p className="text-green-500 text-xs font-bold uppercase tracking-widest">April 17 — April 23, 2026</p>
+          <p className="text-green-500 text-xs font-bold uppercase tracking-widest">April 17 — May 23, 2026</p>
         </div>
         <div className="text-center md:text-right">
           <p className="text-gray-400 text-[10px] uppercase font-bold">Buy 10,000+ $BCC</p>
